@@ -127,9 +127,10 @@
       </tags>
   </entry>
   <entry>
-    <title>学习笔记-《清华大学C++程序设计》</title>
+    <title></title>
     <url>/2020/09/21/%E7%AC%94%E8%AE%B0-%E3%80%8A%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6C-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B/</url>
-    <content><![CDATA[<p>[toc]</p>
+    <content><![CDATA[<p>title: 学习笔记-《清华大学C++程序设计》<br>date: 2020-09-21 11:17:06<br>password:<br>top:<br>tags: C++<br>categories: Career<br>description: 关于该门网课的知识框架<br>comments:<br>visible:<br>sage:</p>
+<p>[toc]</p>
 <h2 id="第四章-类与对象"><a href="#第四章-类与对象" class="headerlink" title="第四章 类与对象"></a>第四章 类与对象</h2><h2 id="第五章-数据的共享与保护"><a href="#第五章-数据的共享与保护" class="headerlink" title="第五章 数据的共享与保护"></a>第五章 数据的共享与保护</h2><ul>
 <li>变量和对象定义在不同的位置，其作用域、可见性、生存期都不同。</li>
 <li>友元：对一些类外的函数、其他的类给予授权，使之可以访问本类的私有成员。</li>
@@ -439,13 +440,71 @@
 </ul>
 <figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">include &lt;iostream&gt;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)&#123;</span><br><span class="line">    <span class="built_in">string</span> city, state;</span><br><span class="line">    getline(<span class="built_in">cin</span>, city, <span class="string">','</span>);</span><br><span class="line">    getline(<span class="built_in">cin</span>, state);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"City:"</span> &lt;&lt; city &lt;&lt; “ State:<span class="string">" &lt;&lt; state &lt;&lt; endl;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">	return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Career</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
+<h2 id="第七章-继承与派生"><a href="#第七章-继承与派生" class="headerlink" title="第七章 继承与派生"></a>第七章 继承与派生</h2><h3 id="7-1-继承的基本概念和语法"><a href="#7-1-继承的基本概念和语法" class="headerlink" title="7.1 继承的基本概念和语法"></a>7.1 继承的基本概念和语法</h3><h4 id="7-1-1-继承与派生概述"><a href="#7-1-1-继承与派生概述" class="headerlink" title="7.1.1 继承与派生概述"></a>7.1.1 继承与派生概述</h4><ul>
+<li><p>继承与派生是同一过程从不同的角度看</p>
+</li>
+<li><ul>
+<li>保持已有类的特性而构造新类的过程称为继承</li>
+<li>在已有类的基础上新增自己的特性而产生新类的过程称为派生。</li>
+</ul>
+</li>
+<li><p>被继承的已有类称为基类（或父类）</p>
+</li>
+<li><p>派生出的新类称为派生类（或子类）</p>
+</li>
+<li><p>直接参与派生出某类的基类称为直接基类</p>
+</li>
+<li><p>基类的基类甚至更高层的基类称为间接基类</p>
+</li>
+</ul>
+<h4 id="7-1-2-继承与派生的目的"><a href="#7-1-2-继承与派生的目的" class="headerlink" title="7.1.2 继承与派生的目的"></a>7.1.2 继承与派生的目的</h4><ul>
+<li>继承的目的：实现设计与代码的重用。</li>
+<li>派生的目的：当新的问题出现，原有程序无法解决（或不能完全解决）时，需要对原有程序进行改造。</li>
+</ul>
+<h4 id="7-1-3-派生类的构成"><a href="#7-1-3-派生类的构成" class="headerlink" title="7.1.3 派生类的构成"></a>7.1.3 派生类的构成</h4><ul>
+<li>吸收基类成员<ul>
+<li>默认情况下派生类包含了全部基类中除构造和析构函数之外的所有成员</li>
+<li>C++11规定可以用using语句继承基类构造函数</li>
+</ul>
+</li>
+<li>改造基类成员<ul>
+<li>隐藏或者覆盖外层同名成员</li>
+</ul>
+</li>
+<li>添加新的成员</li>
+</ul>
+<h4 id="7-1-3-单继承时派生类的定义"><a href="#7-1-3-单继承时派生类的定义" class="headerlink" title="7.1.3 单继承时派生类的定义"></a>7.1.3 单继承时派生类的定义</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Derived ();</span><br><span class="line">  ~Derived ();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-1-4-多继承时派生类的定义"><a href="#7-1-4-多继承时派生类的定义" class="headerlink" title="7.1.4 多继承时派生类的定义"></a>7.1.4 多继承时派生类的定义</h4><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base1, <span class="keyword">private</span> Base2</span><br><span class="line">&#123;	<span class="comment">//注意：每一个“继承方式public/private”，只用于限制对紧随其后之基类的继承。</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Derived ();</span><br><span class="line">  ~Derived ();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-继承方式"><a href="#7-2-继承方式" class="headerlink" title="7.2 继承方式"></a>7.2 继承方式</h3><h4 id="7-2-1-继承方式简介"><a href="#7-2-1-继承方式简介" class="headerlink" title="7.2.1 继承方式简介"></a>7.2.1 继承方式简介</h4><p>不同继承方式的影响主要体现在：</p>
+<ul>
+<li>派生类<strong>成员</strong>对基类成员的访问权限</li>
+<li>通过派生类<strong>对象</strong>对基类成员的访问权限</li>
+</ul>
+<p>三种继承方式：</p>
+<ul>
+<li>公有继承</li>
+<li>私有继承</li>
+<li>保护继承</li>
+</ul>
+<h4 id="7-2-2-公有继承-public"><a href="#7-2-2-公有继承-public" class="headerlink" title="7.2.2 公有继承 public"></a>7.2.2 公有继承 public</h4><ul>
+<li><p>继承的访问控制</p>
+</li>
+<li><ul>
+<li>基类的public和protected成员：访问属性在派生类中保持不变；</li>
+<li>基类的private成员：不可直接访问。</li>
+</ul>
+</li>
+<li><p>访问权限</p>
+</li>
+<li><ul>
+<li>派生类中的成员函数：可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员；</li>
+<li>通过派生类的对象：<strong>只能访问public成员。</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="7-2-3-私有继承-private"><a href="#7-2-3-私有继承-private" class="headerlink" title="7.2.3 私有继承 private"></a>7.2.3 私有继承 private</h4><h4 id="7-2-4-保护继承-protected"><a href="#7-2-4-保护继承-protected" class="headerlink" title="7.2.4 保护继承 protected"></a>7.2.4 保护继承 protected</h4><h3 id="7-3-基类与派生类类型转换"><a href="#7-3-基类与派生类类型转换" class="headerlink" title="7.3 基类与派生类类型转换"></a>7.3 基类与派生类类型转换</h3><h3 id="7-4-派生类的构造和析构"><a href="#7-4-派生类的构造和析构" class="headerlink" title="7.4 派生类的构造和析构"></a>7.4 派生类的构造和析构</h3><h3 id="7-5-派生类成员的标识与访问"><a href="#7-5-派生类成员的标识与访问" class="headerlink" title="7.5 派生类成员的标识与访问"></a>7.5 派生类成员的标识与访问</h3><h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2>]]></content>
   </entry>
   <entry>
     <title>Cryptography</title>
