@@ -108,7 +108,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-04-082609.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-04-083950.png">
-<meta property="og:updated_time" content="2020-10-05T08:50:01.093Z">
+<meta property="og:updated_time" content="2020-10-06T14:59:25.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-《清华大学C++程序设计》">
 <meta name="twitter:description" content="关于该门网课的知识框架">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-10-05 16:50:01" itemprop="dateModified" datetime="2020-10-05T16:50:01+08:00">2020-10-05</time>
+                <time title="Modified: 2020-10-06 22:59:25" itemprop="dateModified" datetime="2020-10-06T22:59:25+08:00">2020-10-06</time>
               
             
           </span>
@@ -831,21 +831,15 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">include &lt;iostream&gt;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++)&#123;</span><br><span class="line">    <span class="built_in">string</span> city, state;</span><br><span class="line">    getline(<span class="built_in">cin</span>, city, <span class="string">','</span>);</span><br><span class="line">    getline(<span class="built_in">cin</span>, state);</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"City:"</span> &lt;&lt; city &lt;&lt; “ State:<span class="string">" &lt;&lt; state &lt;&lt; endl;</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">	return 0;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="第七章-继承与派生"><a href="#第七章-继承与派生" class="headerlink" title="第七章 继承与派生"></a>第七章 继承与派生</h2><h3 id="7-1-继承的基本概念和语法"><a href="#7-1-继承的基本概念和语法" class="headerlink" title="7.1 继承的基本概念和语法"></a>7.1 继承的基本概念和语法</h3><h4 id="7-1-1-继承与派生概述"><a href="#7-1-1-继承与派生概述" class="headerlink" title="7.1.1 继承与派生概述"></a>7.1.1 继承与派生概述</h4><ul>
-<li><p>继承与派生是同一过程从不同的角度看</p>
-</li>
-<li><ul>
+<li>继承与派生是同一过程从不同的角度看<ul>
 <li>保持已有类的特性而构造新类的过程称为继承</li>
 <li>在已有类的基础上新增自己的特性而产生新类的过程称为派生。</li>
 </ul>
 </li>
-<li><p>被继承的已有类称为基类（或父类）</p>
-</li>
-<li><p>派生出的新类称为派生类（或子类）</p>
-</li>
-<li><p>直接参与派生出某类的基类称为直接基类</p>
-</li>
-<li><p>基类的基类甚至更高层的基类称为间接基类</p>
-</li>
+<li>被继承的已有类称为基类（或父类）</li>
+<li>派生出的新类称为派生类（或子类）</li>
+<li>直接参与派生出某类的基类称为直接基类</li>
+<li>基类的基类甚至更高层的基类称为间接基类</li>
 </ul>
 <h4 id="7-1-2-继承与派生的目的"><a href="#7-1-2-继承与派生的目的" class="headerlink" title="7.1.2 继承与派生的目的"></a>7.1.2 继承与派生的目的</h4><ul>
 <li>继承的目的：实现设计与代码的重用。</li>
@@ -879,16 +873,12 @@
 <li>保护继承</li>
 </ul>
 <h4 id="7-2-2-公有继承-public"><a href="#7-2-2-公有继承-public" class="headerlink" title="7.2.2 公有继承 public"></a>7.2.2 公有继承 public</h4><ul>
-<li><p>继承的访问控制</p>
-</li>
-<li><ul>
-<li>基类的public和protected成员：访问属性在派生类中保持不变；</li>
+<li>继承的访问控制<ul>
+<li>基类的public和protected成员：访问属性在派生类中保持不变</li>
 <li>基类的private成员：不可直接访问。</li>
 </ul>
 </li>
-<li><p>访问权限</p>
-</li>
-<li><ul>
+<li>访问权限<ul>
 <li>派生类中的成员函数：可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员；</li>
 <li>通过派生类的对象：只能访问public成员。</li>
 </ul>
