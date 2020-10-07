@@ -108,7 +108,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-04-082609.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-04-083950.png">
-<meta property="og:updated_time" content="2020-10-06T14:59:25.204Z">
+<meta property="og:updated_time" content="2020-10-07T03:55:05.080Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-《清华大学C++程序设计》">
 <meta name="twitter:description" content="关于该门网课的知识框架">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-10-06 22:59:25" itemprop="dateModified" datetime="2020-10-06T22:59:25+08:00">2020-10-06</time>
+                <time title="Modified: 2020-10-07 11:55:05" itemprop="dateModified" datetime="2020-10-07T11:55:05+08:00">2020-10-07</time>
               
             
           </span>
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">13k</span>
+                <span title="Symbols count in article">15k</span>
               
 
               
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">12 mins.</span>
+                <span title="Reading time">13 mins.</span>
               
             </div>
           
@@ -884,7 +884,54 @@
 </ul>
 </li>
 </ul>
-<h4 id="7-2-3-私有继承-private"><a href="#7-2-3-私有继承-private" class="headerlink" title="7.2.3 私有继承 private"></a>7.2.3 私有继承 private</h4><h4 id="7-2-4-保护继承-protected"><a href="#7-2-4-保护继承-protected" class="headerlink" title="7.2.4 保护继承 protected"></a>7.2.4 保护继承 protected</h4><h3 id="7-3-基类与派生类类型转换"><a href="#7-3-基类与派生类类型转换" class="headerlink" title="7.3 基类与派生类类型转换"></a>7.3 基类与派生类类型转换</h3><h3 id="7-4-派生类的构造和析构"><a href="#7-4-派生类的构造和析构" class="headerlink" title="7.4 派生类的构造和析构"></a>7.4 派生类的构造和析构</h3><h3 id="7-5-派生类成员的标识与访问"><a href="#7-5-派生类成员的标识与访问" class="headerlink" title="7.5 派生类成员的标识与访问"></a>7.5 派生类成员的标识与访问</h3><h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2>
+<h4 id="7-2-3-私有继承-private"><a href="#7-2-3-私有继承-private" class="headerlink" title="7.2.3 私有继承 private"></a>7.2.3 私有继承 private</h4><ul>
+<li><p>继承的访问控制</p>
+</li>
+<li><ul>
+<li>基类的<strong>public</strong>和<strong>protected</strong>成员：都以<strong>private</strong>身份出现在派生类中</li>
+<li>基类的private成员：<strong>不可直接访问</strong>。</li>
+</ul>
+</li>
+<li><p>访问权限</p>
+</li>
+<li><ul>
+<li>派生类中的成员函数：可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员；</li>
+<li>通过派生类的对象：不能直接访问从基类继承的任何成员。</li>
+</ul>
+</li>
+</ul>
+<h4 id="7-2-4-保护继承-protected"><a href="#7-2-4-保护继承-protected" class="headerlink" title="7.2.4 保护继承 protected"></a>7.2.4 保护继承 protected</h4><ul>
+<li><p>继承的访问控制</p>
+</li>
+<li><ul>
+<li>基类的<strong>public</strong>和<strong>protected</strong>成员：都以<strong>protected</strong>身份出现在派生类中；</li>
+<li>基类的<strong>private</strong>成员：<strong>不可直接访问</strong>。</li>
+</ul>
+</li>
+<li><p>访问权限</p>
+</li>
+<li><ul>
+<li>派生类中的成员函数：可以直接访问基类中的public和protected成员，但不能直接访问基类的private成员；</li>
+<li>通过派生类的对象：不能直接访问从基类继承的任何成员。</li>
+</ul>
+</li>
+<li><p>protected 成员的特点与作用</p>
+</li>
+<li><ul>
+<li>对建立其所在类对象的模块来说，它与 private 成员的性质相同。</li>
+<li>对于其派生类来说，它与 public 成员的性质相同。</li>
+<li>既实现了数据隐藏，又方便继承，实现代码重用。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    A a;</span><br><span class="line">    a.x = <span class="number">5</span>;<span class="comment">//错误</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">    <span class="keyword">int</span> x;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span>:</span> <span class="keyword">public</span> A&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">function</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">void</span> B:function() &#123;</span><br><span class="line">    x = <span class="number">5</span>;   <span class="comment">//正确</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果派生类有多个基类，也就是多继承时，可以用不同的方式继承每个基类。</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setA</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showA</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setB</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showB</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> b;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span> :</span> <span class="keyword">public</span> A, <span class="keyword">private</span> B &#123; </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">setC</span><span class="params">(<span class="keyword">int</span>, <span class="keyword">int</span>, <span class="keyword">int</span>)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showC</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">A::setA</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    a=x; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">B::setB</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    b=x; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">C::setC</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> z)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//派生类成员直接访问基类的</span></span><br><span class="line">    <span class="comment">//公有成员</span></span><br><span class="line">    setA(x); </span><br><span class="line">    setB(y); </span><br><span class="line">    c = z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//其他函数实现略</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    C obj;</span><br><span class="line">    obj.setA(<span class="number">5</span>);</span><br><span class="line">    obj.showA();</span><br><span class="line">    obj.setC(<span class="number">6</span>,<span class="number">7</span>,<span class="number">9</span>);</span><br><span class="line">    obj.showC();</span><br><span class="line"><span class="comment">// obj.setB(6);  错误	因为B是通过私有继承到C类，B类内的私有成员在C类外不能通过对象访问</span></span><br><span class="line"><span class="comment">// obj.showB(); 错误</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-3-基类与派生类类型转换"><a href="#7-3-基类与派生类类型转换" class="headerlink" title="7.3 基类与派生类类型转换"></a>7.3 基类与派生类类型转换</h3><h3 id="7-4-派生类的构造和析构"><a href="#7-4-派生类的构造和析构" class="headerlink" title="7.4 派生类的构造和析构"></a>7.4 派生类的构造和析构</h3><h3 id="7-5-派生类成员的标识与访问"><a href="#7-5-派生类成员的标识与访问" class="headerlink" title="7.5 派生类成员的标识与访问"></a>7.5 派生类成员的标识与访问</h3><h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2>
       
     </div>
 
@@ -1227,7 +1274,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">151k</span>
+    <span title="Symbols count total">152k</span>
   
 
   
@@ -1236,7 +1283,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:17</span>
+    <span title="Reading time total">2:18</span>
   
 </div>
 
