@@ -110,7 +110,8 @@
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-04-083950.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-100024.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-100229.png">
-<meta property="og:updated_time" content="2020-10-09T10:08:51.449Z">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-103629.png">
+<meta property="og:updated_time" content="2020-10-10T02:22:39.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-《清华大学C++程序设计》">
 <meta name="twitter:description" content="关于该门网课的知识框架">
@@ -423,7 +424,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-10-09 18:08:51" itemprop="dateModified" datetime="2020-10-09T18:08:51+08:00">2020-10-09</time>
+                <time title="Modified: 2020-10-10 10:22:39" itemprop="dateModified" datetime="2020-10-10T10:22:39+08:00">2020-10-10</time>
               
             
           </span>
@@ -487,7 +488,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">20k</span>
+                <span title="Symbols count in article">22k</span>
               
 
               
@@ -501,7 +502,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">19 mins.</span>
+                <span title="Reading time">20 mins.</span>
               
             </div>
           
@@ -1100,7 +1101,111 @@
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base0</span> &#123;</span>   </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base0(<span class="keyword">int</span> var) : var0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var0;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun0</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Member of Base0"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base1</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Base0 &#123;</span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    Base1(<span class="keyword">int</span> var) : Base0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base2</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Base0 &#123; </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base2(<span class="keyword">int</span> var) : Base0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base1, <span class="keyword">public</span> Base2 &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Derived(<span class="keyword">int</span> var) : Base0(var), Base1(var), Base2(var) </span><br><span class="line">   &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">   </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Member of Derived"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;    <span class="comment">//程序主函数</span></span><br><span class="line">    <span class="function">Derived <span class="title">d</span><span class="params">(<span class="number">1</span>)</span></span>;</span><br><span class="line">    d.var0 = <span class="number">2</span>; <span class="comment">//直接访问虚基类的数据成员</span></span><br><span class="line">    d.fun0();   <span class="comment">//直接访问虚基类的函数成员</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2>
+<h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2><h3 id="8-1-运算符重载"><a href="#8-1-运算符重载" class="headerlink" title="8.1 运算符重载"></a>8.1 运算符重载</h3><h4 id="8-1-1-运算符重载的规则"><a href="#8-1-1-运算符重载的规则" class="headerlink" title="8.1.1 运算符重载的规则"></a>8.1.1 运算符重载的规则</h4><h4 id="8-1-2-双目运算符重载为成员函数"><a href="#8-1-2-双目运算符重载为成员函数" class="headerlink" title="8.1.2 双目运算符重载为成员函数"></a>8.1.2 双目运算符重载为成员函数</h4><h4 id="8-1-3-单目运算符重载为成员函数"><a href="#8-1-3-单目运算符重载为成员函数" class="headerlink" title="8.1.3 单目运算符重载为成员函数"></a>8.1.3 单目运算符重载为成员函数</h4><h4 id="8-1-4-运算符重载为非成员函数"><a href="#8-1-4-运算符重载为非成员函数" class="headerlink" title="8.1.4 运算符重载为非成员函数"></a>8.1.4 运算符重载为非成员函数</h4><h3 id="8-2-虚函数"><a href="#8-2-虚函数" class="headerlink" title="8.2 虚函数"></a>8.2 虚函数</h3><h4 id="8-2-1-虚函数"><a href="#8-2-1-虚函数" class="headerlink" title="8.2.1 虚函数"></a>8.2.1 虚函数</h4><ul>
+<li>用virtual关键字说明的函数</li>
+<li>虚函数是实现运行时多态性基础</li>
+<li>C++中的虚函数是动态绑定的函数</li>
+<li>虚函数必须是非静态的成员函数，虚函数经过派生之后，就可以实现<strong>运行过程中的多态</strong>。</li>
+<li>一般成员函数可以是虚函数</li>
+<li>构造函数不能是虚函数</li>
+<li>析构函数可以是虚函数</li>
+</ul>
+<p><strong>一般虚函数成员</strong></p>
+<ul>
+<li><p>虚函数的声明</p>
+<p>virtual 函数类型 函数名（形参表）;</p>
+</li>
+<li><p>虚函数声明只能出现在类定义中的函数原型声明中，而不能在成员函数实现的时候。</p>
+</li>
+<li><p>在派生类中可以对基类中的成员函数进行覆盖。</p>
+</li>
+<li><p>虚函数一般不声明为内联函数，因为对虚函数的调用需要动态绑定，而对内联函数的处理是静态的。</p>
+</li>
+</ul>
+<p><strong>virtual 关键字</strong></p>
+<ul>
+<li><p>派生类可以不显式地用virtual声明虚函数，这时系统就会用以下规则来判断派生类的一个函数成员是不是虚函数：</p>
+</li>
+<li><ul>
+<li>该函数是否与基类的虚函数有相同的名称、参数个数及对应参数类型；</li>
+<li>该函数是否与基类的虚函数有相同的返回值或者满足类型兼容规则的指针、引用型的返回值；</li>
+</ul>
+</li>
+<li><p>如果从名称、参数及返回值三个方面检查之后，派生类的函数满足上述条件，就会自动确定为虚函数。这时，派生类的虚函数便覆盖了基类的虚函数。</p>
+</li>
+<li><p>派生类中的虚函数还会隐藏基类中同名函数的所有其它重载形式。</p>
+</li>
+<li><p>一般习惯于在派生类的函数中也使用virtual关键字，以增加程序的可读性。</p>
+</li>
+</ul>
+<h4 id="8-2-2-虚析构函数"><a href="#8-2-2-虚析构函数" class="headerlink" title="8.2.2 虚析构函数"></a>8.2.2 虚析构函数</h4><p>为什么需要虚析构函数？</p>
+<ul>
+<li><p>可能通过基类指针删除派生类对象；</p>
+</li>
+<li><p>如果你打算允许其他人通过基类指针调用对象的析构函数（通过delete这样做是正常的），就需要让基类的析构函数成为虚函数，<strong>否则执行delete的结果是不确定的。</strong></p>
+<h4 id="8-2-3-虚表与动态绑定"><a href="#8-2-3-虚表与动态绑定" class="headerlink" title="8.2.3 虚表与动态绑定"></a>8.2.3 虚表与动态绑定</h4></li>
+<li><p>虚表</p>
+</li>
+<li><ul>
+<li>每个多态类有一个虚表（virtual table）</li>
+<li>虚表中有当前类的各个虚函数的入口地址</li>
+<li>每个对象有一个指向当前类的虚表的指针（虚指针vptr）</li>
+</ul>
+</li>
+<li><p>动态绑定的实现</p>
+</li>
+<li><ul>
+<li>构造函数中为对象的虚指针赋值</li>
+<li>通过多态类型的指针或引用调用成员函数时，通过虚指针找到虚表，进而找到所调用的虚函数的入口地址</li>
+<li>通过该入口地址调用虚函数</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-103629.png" alt="image-20201009183628918"></p>
+<h3 id="8-3-抽象类"><a href="#8-3-抽象类" class="headerlink" title="8.3 抽象类"></a>8.3 抽象类</h3><p>纯虚函数</p>
+<ul>
+<li><p>纯虚函数是一个在基类中声明的虚函数，它在该基类中没有定义具体的操作内容，要求各派生类根据实际需要定义自己的版本，纯虚函数的声明格式为：</p>
+<p>virtual 函数类型 函数名(参数表) = 0;</p>
+</li>
+<li><p>带有纯虚函数的类称为抽象类</p>
+</li>
+</ul>
+<p>抽象类</p>
+<ul>
+<li><p>带有纯虚函数的类称为抽象类:</p>
+<p>class 类名 { virtual 类型 函数名(参数表)=0; //其他成员…… }</p>
+</li>
+</ul>
+<p>抽象类作用</p>
+<ul>
+<li>抽象类为抽象和设计的目的而声明</li>
+<li>将有关的数据和行为组织在一个继承层次结构中，保证派生类具有要求的行为。</li>
+<li>对于暂时无法实现的函数，可以声明为纯虚函数，留给派生类去实现。</li>
+</ul>
+<p>注意</p>
+<ul>
+<li>抽象类只能作为基类来使用。</li>
+<li>不能定义抽象类的对象。</li>
+</ul>
+<h3 id="8-4-override与final"><a href="#8-4-override与final" class="headerlink" title="8.4 override与final"></a>8.4 override与final</h3><p>override</p>
+<ul>
+<li>多态行为的基础：基类声明虚函数，继承类声明一个函数覆盖该虚函数</li>
+<li>覆盖要求： 函数签名（signatture）完全一致</li>
+<li>函数签名包括：函数名 参数列表 const</li>
+</ul>
+<p><strong>显式函数覆盖</strong></p>
+<ul>
+<li>C++11 引入显式函数覆盖，在编译期而非运行期捕获此类错误。 - 在虚函数显式重载中运用，编译器会检查基类是否存在一虚拟函数，与派生类中带有声明override的虚拟函数，有相同的函数签名（signature）；若不存在，则会回报错误。</li>
+</ul>
+<p><strong>final</strong></p>
+<ul>
+<li><p>C++11提供的final，用来避免类被继承，或是基类的函数被改写 例： struct Base1 final { };</p>
+<p>struct Derived1 : Base1 { }; // 编译错误：Base1为final，不允许被继承</p>
+<p>struct Base2 { virtual void f() final; };</p>
+<p>struct Derived2 : Base2 { void f(); // 编译错误：Base2::f 为final，不允许被覆盖 };</p>
+</li>
+</ul>
+
       
     </div>
 
@@ -1409,7 +1514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-类与对象"><span class="nav-text">第四章 类与对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-数据的共享与保护"><span class="nav-text">第五章 数据的共享与保护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标识符的作用域与可见性"><span class="nav-text">1. 标识符的作用域与可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-作用域分类"><span class="nav-text">1.1 作用域分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-可见性"><span class="nav-text">1.2 可见性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对象的生存期"><span class="nav-text">2. 对象的生存期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-静态生存期"><span class="nav-text">2.1 静态生存期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-动态生存期"><span class="nav-text">2.2 动态生存期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-类的静态成员"><span class="nav-text">3. 类的静态成员</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-静态数据成员"><span class="nav-text">3.1 静态数据成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-静态函数成员"><span class="nav-text">3.2 静态函数成员</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-类的友元"><span class="nav-text">4. 类的友元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-友元函数"><span class="nav-text">4.1 友元函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-友元类"><span class="nav-text">4.2 友元类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-共享数据的保护"><span class="nav-text">5. 共享数据的保护</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-常类型"><span class="nav-text">5.1 常类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-1-常对象"><span class="nav-text">5.1.1 常对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-2-常成员"><span class="nav-text">5.1.2 常成员</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-常引用"><span class="nav-text">5.1.3 常引用</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章-数组、指针和字符串"><span class="nav-text">第六章 数组、指针和字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-数组的定义和初始化"><span class="nav-text">6.1 数组的定义和初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-数组作为函数的参数"><span class="nav-text">6.2 数组作为函数的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-对象数组"><span class="nav-text">6.3 对象数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-数组元素的构造和析构"><span class="nav-text">6.3.1 数组元素的构造和析构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-基于范围的for循环"><span class="nav-text">6.4 基于范围的for循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-指针的定义和运算"><span class="nav-text">6.5 指针的定义和运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-1-指针的概念"><span class="nav-text">6.5.1 指针的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-2-指针的初始化和赋值"><span class="nav-text">6.5.2 指针的初始化和赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指向常量的指针-amp-指针类型的常量"><span class="nav-text">指向常量的指针 &amp; 指针类型的常量</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-3-指针的算术运算、关系运算"><span class="nav-text">6.5.3 指针的算术运算、关系运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#算术运算"><span class="nav-text">算术运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关系运算"><span class="nav-text">关系运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-指针与数组"><span class="nav-text">6.6 指针与数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-指针与函数"><span class="nav-text">6.7 指针与函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-1-指针类型的函数"><span class="nav-text">6.7.1 指针类型的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-2-指向函数的指针"><span class="nav-text">6.7.2 指向函数的指针</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-对象指针"><span class="nav-text">6.8 对象指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-动态内存分配"><span class="nav-text">6.9 动态内存分配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-9-1-动态分配与释放内存"><span class="nav-text">6.9.1 动态分配与释放内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-9-2-申请和释放动态数组"><span class="nav-text">6.9.2 申请和释放动态数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-智能指针"><span class="nav-text">6.10 智能指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-vector对象"><span class="nav-text">6.11 vector对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-对象复制与移动"><span class="nav-text">6.12 对象复制与移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-12-1-深层复制和浅层复制"><span class="nav-text">6.12.1 深层复制和浅层复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-12-2-移动构造"><span class="nav-text">6.12.2 移动构造</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-字符串"><span class="nav-text">6.13 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-1-C风格字符串"><span class="nav-text">6.13.1 C风格字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-2-string类"><span class="nav-text">6.13.2 string类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章-继承与派生"><span class="nav-text">第七章 继承与派生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-继承的基本概念和语法"><span class="nav-text">7.1 继承的基本概念和语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-1-继承与派生概述"><span class="nav-text">7.1.1 继承与派生概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-2-继承与派生的目的"><span class="nav-text">7.1.2 继承与派生的目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3-派生类的构成"><span class="nav-text">7.1.3 派生类的构成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3-单继承时派生类的定义"><span class="nav-text">7.1.3 单继承时派生类的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-4-多继承时派生类的定义"><span class="nav-text">7.1.4 多继承时派生类的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-继承方式"><span class="nav-text">7.2 继承方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-1-继承方式简介"><span class="nav-text">7.2.1 继承方式简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-2-公有继承-public"><span class="nav-text">7.2.2 公有继承 public</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-3-私有继承-private"><span class="nav-text">7.2.3 私有继承 private</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-4-保护继承-protected"><span class="nav-text">7.2.4 保护继承 protected</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-基类与派生类类型转换"><span class="nav-text">7.3 基类与派生类类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-派生类的构造和析构"><span class="nav-text">7.4 派生类的构造和析构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-1-派生类的构造函数"><span class="nav-text">7.4.1 派生类的构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#单继承"><span class="nav-text">单继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多继承"><span class="nav-text">多继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-2-派生类的构造函数举例"><span class="nav-text">7.4.2 派生类的构造函数举例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-3-派生类复制构造函数"><span class="nav-text">7.4.3 派生类复制构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-4-派生类的析构函数"><span class="nav-text">7.4.4 派生类的析构函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-派生类成员的标识与访问"><span class="nav-text">7.5 派生类成员的标识与访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-5-1-访问从基类继承的成员"><span class="nav-text">7.5.1 访问从基类继承的成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-5-2-虚基类"><span class="nav-text">7.5.2 虚基类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#虚基类及其派生类构造函数"><span class="nav-text">虚基类及其派生类构造函数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章-多态性"><span class="nav-text">第八章 多态性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第四章-类与对象"><span class="nav-text">第四章 类与对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第五章-数据的共享与保护"><span class="nav-text">第五章 数据的共享与保护</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-标识符的作用域与可见性"><span class="nav-text">1. 标识符的作用域与可见性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-作用域分类"><span class="nav-text">1.1 作用域分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-可见性"><span class="nav-text">1.2 可见性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-对象的生存期"><span class="nav-text">2. 对象的生存期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-静态生存期"><span class="nav-text">2.1 静态生存期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-动态生存期"><span class="nav-text">2.2 动态生存期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-类的静态成员"><span class="nav-text">3. 类的静态成员</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-静态数据成员"><span class="nav-text">3.1 静态数据成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-2-静态函数成员"><span class="nav-text">3.2 静态函数成员</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-类的友元"><span class="nav-text">4. 类的友元</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-友元函数"><span class="nav-text">4.1 友元函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-友元类"><span class="nav-text">4.2 友元类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-共享数据的保护"><span class="nav-text">5. 共享数据的保护</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-常类型"><span class="nav-text">5.1 常类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-1-常对象"><span class="nav-text">5.1.1 常对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-2-常成员"><span class="nav-text">5.1.2 常成员</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-1-3-常引用"><span class="nav-text">5.1.3 常引用</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第六章-数组、指针和字符串"><span class="nav-text">第六章 数组、指针和字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-数组的定义和初始化"><span class="nav-text">6.1 数组的定义和初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-数组作为函数的参数"><span class="nav-text">6.2 数组作为函数的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-对象数组"><span class="nav-text">6.3 对象数组</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-1-数组元素的构造和析构"><span class="nav-text">6.3.1 数组元素的构造和析构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-基于范围的for循环"><span class="nav-text">6.4 基于范围的for循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-指针的定义和运算"><span class="nav-text">6.5 指针的定义和运算</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-1-指针的概念"><span class="nav-text">6.5.1 指针的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-2-指针的初始化和赋值"><span class="nav-text">6.5.2 指针的初始化和赋值</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#指向常量的指针-amp-指针类型的常量"><span class="nav-text">指向常量的指针 &amp; 指针类型的常量</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-5-3-指针的算术运算、关系运算"><span class="nav-text">6.5.3 指针的算术运算、关系运算</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#算术运算"><span class="nav-text">算术运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#关系运算"><span class="nav-text">关系运算</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-指针与数组"><span class="nav-text">6.6 指针与数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-指针与函数"><span class="nav-text">6.7 指针与函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-1-指针类型的函数"><span class="nav-text">6.7.1 指针类型的函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-7-2-指向函数的指针"><span class="nav-text">6.7.2 指向函数的指针</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-对象指针"><span class="nav-text">6.8 对象指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-动态内存分配"><span class="nav-text">6.9 动态内存分配</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-9-1-动态分配与释放内存"><span class="nav-text">6.9.1 动态分配与释放内存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-9-2-申请和释放动态数组"><span class="nav-text">6.9.2 申请和释放动态数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-智能指针"><span class="nav-text">6.10 智能指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-vector对象"><span class="nav-text">6.11 vector对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-对象复制与移动"><span class="nav-text">6.12 对象复制与移动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-12-1-深层复制和浅层复制"><span class="nav-text">6.12.1 深层复制和浅层复制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-12-2-移动构造"><span class="nav-text">6.12.2 移动构造</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-字符串"><span class="nav-text">6.13 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-1-C风格字符串"><span class="nav-text">6.13.1 C风格字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-2-string类"><span class="nav-text">6.13.2 string类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第七章-继承与派生"><span class="nav-text">第七章 继承与派生</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-继承的基本概念和语法"><span class="nav-text">7.1 继承的基本概念和语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-1-继承与派生概述"><span class="nav-text">7.1.1 继承与派生概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-2-继承与派生的目的"><span class="nav-text">7.1.2 继承与派生的目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3-派生类的构成"><span class="nav-text">7.1.3 派生类的构成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-3-单继承时派生类的定义"><span class="nav-text">7.1.3 单继承时派生类的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-1-4-多继承时派生类的定义"><span class="nav-text">7.1.4 多继承时派生类的定义</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-继承方式"><span class="nav-text">7.2 继承方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-1-继承方式简介"><span class="nav-text">7.2.1 继承方式简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-2-公有继承-public"><span class="nav-text">7.2.2 公有继承 public</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-3-私有继承-private"><span class="nav-text">7.2.3 私有继承 private</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-2-4-保护继承-protected"><span class="nav-text">7.2.4 保护继承 protected</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-基类与派生类类型转换"><span class="nav-text">7.3 基类与派生类类型转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-派生类的构造和析构"><span class="nav-text">7.4 派生类的构造和析构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-1-派生类的构造函数"><span class="nav-text">7.4.1 派生类的构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#单继承"><span class="nav-text">单继承</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多继承"><span class="nav-text">多继承</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-2-派生类的构造函数举例"><span class="nav-text">7.4.2 派生类的构造函数举例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-3-派生类复制构造函数"><span class="nav-text">7.4.3 派生类复制构造函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-4-4-派生类的析构函数"><span class="nav-text">7.4.4 派生类的析构函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-派生类成员的标识与访问"><span class="nav-text">7.5 派生类成员的标识与访问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-5-1-访问从基类继承的成员"><span class="nav-text">7.5.1 访问从基类继承的成员</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-5-2-虚基类"><span class="nav-text">7.5.2 虚基类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#虚基类及其派生类构造函数"><span class="nav-text">虚基类及其派生类构造函数</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第八章-多态性"><span class="nav-text">第八章 多态性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-运算符重载"><span class="nav-text">8.1 运算符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-1-运算符重载的规则"><span class="nav-text">8.1.1 运算符重载的规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-2-双目运算符重载为成员函数"><span class="nav-text">8.1.2 双目运算符重载为成员函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-3-单目运算符重载为成员函数"><span class="nav-text">8.1.3 单目运算符重载为成员函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-4-运算符重载为非成员函数"><span class="nav-text">8.1.4 运算符重载为非成员函数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-虚函数"><span class="nav-text">8.2 虚函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-1-虚函数"><span class="nav-text">8.2.1 虚函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-2-虚析构函数"><span class="nav-text">8.2.2 虚析构函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-3-虚表与动态绑定"><span class="nav-text">8.2.3 虚表与动态绑定</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-抽象类"><span class="nav-text">8.3 抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-override与final"><span class="nav-text">8.4 override与final</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1443,7 +1548,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">158k</span>
+    <span title="Symbols count total">160k</span>
   
 
   
@@ -1452,7 +1557,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:24</span>
+    <span title="Reading time total">2:25</span>
   
 </div>
 
