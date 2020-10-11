@@ -111,7 +111,7 @@
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-100024.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-100229.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-10-09-103629.png">
-<meta property="og:updated_time" content="2020-10-10T02:22:39.331Z">
+<meta property="og:updated_time" content="2020-10-11T12:42:04.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习笔记-《清华大学C++程序设计》">
 <meta name="twitter:description" content="关于该门网课的知识框架">
@@ -424,7 +424,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-10-10 10:22:39" itemprop="dateModified" datetime="2020-10-10T10:22:39+08:00">2020-10-10</time>
+                <time title="Modified: 2020-10-11 20:42:04" itemprop="dateModified" datetime="2020-10-11T20:42:04+08:00">2020-10-11</time>
               
             
           </span>
@@ -488,7 +488,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">22k</span>
+                <span title="Symbols count in article">27k</span>
               
 
               
@@ -502,7 +502,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">20 mins.</span>
+                <span title="Reading time">24 mins.</span>
               
             </div>
           
@@ -1101,7 +1101,73 @@
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base0</span> &#123;</span>   </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base0(<span class="keyword">int</span> var) : var0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var0;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun0</span><span class="params">()</span> </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Member of Base0"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base1</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Base0 &#123;</span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    Base1(<span class="keyword">int</span> var) : Base0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base2</span>:</span> <span class="keyword">virtual</span> <span class="keyword">public</span> Base0 &#123; </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Base2(<span class="keyword">int</span> var) : Base0(var) &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var2;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span>:</span> <span class="keyword">public</span> Base1, <span class="keyword">public</span> Base2 &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Derived(<span class="keyword">int</span> var) : Base0(var), Base1(var), Base2(var) </span><br><span class="line">   &#123; &#125;</span><br><span class="line">    <span class="keyword">int</span> var;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span></span><br><span class="line"><span class="function">   </span>&#123; <span class="built_in">cout</span> &lt;&lt; <span class="string">"Member of Derived"</span> &lt;&lt; <span class="built_in">endl</span>; &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;    <span class="comment">//程序主函数</span></span><br><span class="line">    <span class="function">Derived <span class="title">d</span><span class="params">(<span class="number">1</span>)</span></span>;</span><br><span class="line">    d.var0 = <span class="number">2</span>; <span class="comment">//直接访问虚基类的数据成员</span></span><br><span class="line">    d.fun0();   <span class="comment">//直接访问虚基类的函数成员</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2><h3 id="8-1-运算符重载"><a href="#8-1-运算符重载" class="headerlink" title="8.1 运算符重载"></a>8.1 运算符重载</h3><h4 id="8-1-1-运算符重载的规则"><a href="#8-1-1-运算符重载的规则" class="headerlink" title="8.1.1 运算符重载的规则"></a>8.1.1 运算符重载的规则</h4><h4 id="8-1-2-双目运算符重载为成员函数"><a href="#8-1-2-双目运算符重载为成员函数" class="headerlink" title="8.1.2 双目运算符重载为成员函数"></a>8.1.2 双目运算符重载为成员函数</h4><h4 id="8-1-3-单目运算符重载为成员函数"><a href="#8-1-3-单目运算符重载为成员函数" class="headerlink" title="8.1.3 单目运算符重载为成员函数"></a>8.1.3 单目运算符重载为成员函数</h4><h4 id="8-1-4-运算符重载为非成员函数"><a href="#8-1-4-运算符重载为非成员函数" class="headerlink" title="8.1.4 运算符重载为非成员函数"></a>8.1.4 运算符重载为非成员函数</h4><h3 id="8-2-虚函数"><a href="#8-2-虚函数" class="headerlink" title="8.2 虚函数"></a>8.2 虚函数</h3><h4 id="8-2-1-虚函数"><a href="#8-2-1-虚函数" class="headerlink" title="8.2.1 虚函数"></a>8.2.1 虚函数</h4><ul>
+<h2 id="第八章-多态性"><a href="#第八章-多态性" class="headerlink" title="第八章 多态性"></a>第八章 多态性</h2><h3 id="8-1-运算符重载"><a href="#8-1-运算符重载" class="headerlink" title="8.1 运算符重载"></a>8.1 运算符重载</h3><h4 id="8-1-1-运算符重载的规则"><a href="#8-1-1-运算符重载的规则" class="headerlink" title="8.1.1 运算符重载的规则"></a>8.1.1 运算符重载的规则</h4><ul>
+<li>C++ 几乎可以重载全部的运算符，而且只能够重载C++中已经有的。</li>
+<li>不能重载的运算符：“.”、“.*”、“::”、“?:”</li>
+<li>重载之后运算符的优先级和结合性都不会改变。</li>
+<li>运算符重载是针对新类型数据的实际需要，对原有运算符进行适当的改造。</li>
+</ul>
+<h4 id="8-1-2-双目运算符重载为成员函数"><a href="#8-1-2-双目运算符重载为成员函数" class="headerlink" title="8.1.2 双目运算符重载为成员函数"></a>8.1.2 双目运算符重载为成员函数</h4><p>重载为类成员的运算符函数定义形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">函数类型  operator 运算符（形参）</span><br><span class="line">&#123;</span><br><span class="line">       ......</span><br><span class="line">&#125;</span><br><span class="line">参数个数=原操作数个数-1   （后置++、--除外）</span><br></pre></td></tr></table></figure>
+
+<p><strong>双目运算符重载规则</strong></p>
+<ul>
+<li>如果要重载 B 为类成员函数，使之能够实现表达式 oprd1 B oprd2，其中 oprd1 为A 类对象，则 B 应被重载为 A 类的成员函数，形参类型应该是 oprd2 所属的类型。</li>
+<li>经重载后，表达式 oprd1 B oprd2 相当于 oprd1.operator B(oprd2)</li>
+</ul>
+<p>例 : 复数类加减法运算重载为成员函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">要求:将+、-运算重载为复数类的成员函数。</span><br><span class="line">规则:实部和虚部分别相加减。</span><br><span class="line">操作数:两个操作数都是复数类的对象。</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Complex(<span class="keyword">double</span> r = <span class="number">0.0</span>, <span class="keyword">double</span> i = <span class="number">0.0</span>) : real(r), imag(i) &#123; &#125;</span><br><span class="line">    <span class="comment">//运算符+重载成员函数</span></span><br><span class="line">  Complex <span class="keyword">operator</span> + (<span class="keyword">const</span> Complex &amp;c2) <span class="keyword">const</span>;</span><br><span class="line">    <span class="comment">//运算符-重载成员函数</span></span><br><span class="line">  Complex <span class="keyword">operator</span> - (<span class="keyword">const</span> Complex &amp;c2) <span class="keyword">const</span>;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">display</span><span class="params">()</span> <span class="keyword">const</span></span>;   <span class="comment">//输出复数</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">double</span> real;    <span class="comment">//复数实部</span></span><br><span class="line">    <span class="keyword">double</span> imag;    <span class="comment">//复数虚部</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Complex Complex::<span class="keyword">operator</span>+(<span class="keyword">const</span> Complex &amp;c2) <span class="keyword">const</span>&#123;</span><br><span class="line">  <span class="comment">//创建一个临时无名对象作为返回值 </span></span><br><span class="line">  <span class="keyword">return</span> Complex(real+c2.real, imag+c2.imag); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Complex Complex::<span class="keyword">operator</span>-(<span class="keyword">const</span> Complex &amp;c2) <span class="keyword">const</span>&#123;</span><br><span class="line"> <span class="comment">//创建一个临时无名对象作为返回值</span></span><br><span class="line">    <span class="keyword">return</span> Complex(real-c2.real, imag-c2.imag); </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Complex::display</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"("</span>&lt;&lt;real&lt;&lt;<span class="string">", "</span>&lt;&lt;imag&lt;&lt;<span class="string">")"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Complex c1(5, 4), c2(2, 10), c3;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c1 = "</span>; c1.<span class="built_in">display</span>();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c2 = "</span>; c2.<span class="built_in">display</span>();</span><br><span class="line">    c3 = c1 - c2;   <span class="comment">//使用重载运算符完成复数减法</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c3 = c1 - c2 = "</span>; c3.<span class="built_in">display</span>();</span><br><span class="line">    c3 = c1 + c2;   <span class="comment">//使用重载运算符完成复数加法</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c3 = c1 + c2 = "</span>; c3.<span class="built_in">display</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-1-3-单目运算符重载为成员函数"><a href="#8-1-3-单目运算符重载为成员函数" class="headerlink" title="8.1.3 单目运算符重载为成员函数"></a>8.1.3 单目运算符重载为成员函数</h4><p><strong>前置单目运算符重载规则</strong></p>
+<ul>
+<li>如果要重载 U 为类成员函数，使之能够实现表达式 U oprd，其中 oprd 为A类对象，则 U 应被重载为 A 类的成员函数，无形参。</li>
+<li>经重载后，表达式 U oprd 相当于 oprd.operator U()</li>
+</ul>
+<p><strong>后置单目运算符 ++和–重载规则</strong></p>
+<ul>
+<li>如果要重载 ++或–为类成员函数，使之能够实现表达式 oprd++ 或 oprd– ，其中 oprd 为A类对象，则 ++或– 应被重载为 A 类的成员函数，且具有一个 int 类型形参。</li>
+<li>经重载后，表达式 oprd++ 相当于 oprd.operator ++(0)</li>
+</ul>
+<p><strong>例：重载前置++和后置++为时钟类成员函数</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">前置单目运算符，重载函数没有形参</span><br><span class="line">后置++运算符，重载函数需要有一个<span class="keyword">int</span>形参</span><br><span class="line">操作数是时钟类的对象。</span><br><span class="line">实现时间增加<span class="number">1</span>秒钟。</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Clock</span> &#123;</span><span class="comment">//时钟类定义</span></span><br><span class="line"><span class="keyword">public</span>: </span><br><span class="line">    Clock(<span class="keyword">int</span> hour = <span class="number">0</span>, <span class="keyword">int</span> minute = <span class="number">0</span>, <span class="keyword">int</span> second = <span class="number">0</span>);</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">showTime</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  <span class="comment">//前置单目运算符重载</span></span><br><span class="line">    Clock&amp; <span class="keyword">operator</span> ++ ();</span><br><span class="line">  <span class="comment">//后置单目运算符重载</span></span><br><span class="line">    Clock <span class="keyword">operator</span> ++ (<span class="keyword">int</span>);    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> hour, minute, second;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Clock::Clock(<span class="keyword">int</span> hour, <span class="keyword">int</span> minute, <span class="keyword">int</span> second) &#123;    </span><br><span class="line">    <span class="keyword">if</span> (<span class="number">0</span> &lt;= hour &amp;&amp; hour &lt; <span class="number">24</span> &amp;&amp; <span class="number">0</span> &lt;= minute &amp;&amp; minute &lt; <span class="number">60</span></span><br><span class="line">        &amp;&amp; <span class="number">0</span> &lt;= second &amp;&amp; second &lt; <span class="number">60</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;hour = hour;</span><br><span class="line">        <span class="keyword">this</span>-&gt;minute = minute;</span><br><span class="line">        <span class="keyword">this</span>-&gt;second = second;</span><br><span class="line">    &#125; <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"Time error!"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Clock::showTime</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;  <span class="comment">//显示时间</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; hour &lt;&lt; <span class="string">":"</span> &lt;&lt; minute &lt;&lt; <span class="string">":"</span> &lt;&lt; second &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//前置++：先+1再使用</span></span><br><span class="line"><span class="comment">//运算结果返回的是左值，所以源数据是可以被修改的，可用在之后的后置++定义</span></span><br><span class="line">Clock &amp; Clock::<span class="keyword">operator</span> ++ () &#123; </span><br><span class="line">    second++;</span><br><span class="line">    <span class="keyword">if</span> (second &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">        second -= <span class="number">60</span>;  minute++;</span><br><span class="line">        <span class="keyword">if</span> (minute &gt;= <span class="number">60</span>) &#123;</span><br><span class="line">          minute -= <span class="number">60</span>; hour = (hour + <span class="number">1</span>) % <span class="number">24</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//后置++：先使用后++</span></span><br><span class="line"><span class="comment">//运算结果返回的只是一个临时右值，是源数据的复制品</span></span><br><span class="line">Clock Clock::<span class="keyword">operator</span> ++ (<span class="keyword">int</span>) &#123;</span><br><span class="line">    <span class="comment">//注意形参表中的整型参数</span></span><br><span class="line">    Clock old = *<span class="keyword">this</span>;</span><br><span class="line">    ++(*<span class="keyword">this</span>);  <span class="comment">//调用前置“++”运算符，更能保证一致性</span></span><br><span class="line">    <span class="keyword">return</span> old;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Clock <span class="title">myClock</span><span class="params">(<span class="number">23</span>, <span class="number">59</span>, <span class="number">59</span>)</span></span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"First time output: "</span>;</span><br><span class="line">    myClock.showTime();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Show myClock++:    "</span>;</span><br><span class="line">    (myClock++).showTime();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"Show ++myClock:    "</span>;</span><br><span class="line">    (++myClock).showTime();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line">运行结果：</span><br><span class="line">  First time output: <span class="number">23</span>:<span class="number">59</span>:<span class="number">59</span></span><br><span class="line">  Show myClock++:    <span class="number">23</span>:<span class="number">59</span>:<span class="number">59</span></span><br><span class="line">  Show ++myClock:    <span class="number">0</span>:<span class="number">0</span>:<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="8-1-4-运算符重载为非成员函数"><a href="#8-1-4-运算符重载为非成员函数" class="headerlink" title="8.1.4 运算符重载为非成员函数"></a>8.1.4 运算符重载为非成员函数</h4><ul>
+<li>有些运算符不能重载为成员函数，例如二元运算符的左操作数不是对象，或者是不能由我们重载运算符的对象</li>
+</ul>
+<p>运算符重载为非成员函数的规则</p>
+<ul>
+<li><p>函数的形参代表依自左至右次序排列的各操作数。</p>
+</li>
+<li><p>重载为非成员函数时</p>
+</li>
+<li><p>参数个数=原操作数个数（后置++、–除外）</p>
+</li>
+<li><p>至少应该有一个自定义类型的参数。</p>
+</li>
+<li><p>后置单目运算符 ++和–的重载函数，形参列表中要增加一个int，但不必写形参名。</p>
+</li>
+<li><p>如果在运算符的重载函数中需要操作某类对象的私有成员，可以将此函数声明为该类的友元。</p>
+</li>
+<li><p>双目运算符 B重载后，表达式oprd1 B oprd2 等同于operator B(oprd1,oprd2 )</p>
+</li>
+<li><p>前置单目运算符 B重载后，表达式 B oprd 等同于operator B(oprd )</p>
+</li>
+<li><p>后置单目运算符 ++和–重载后，表达式 oprd B 等同于operator B(oprd,0 )</p>
+</li>
+</ul>
+<p><strong>例：重载Complex的加减法和“&lt;&lt;”运算符为非成员函数</strong></p>
+<ul>
+<li>将+、-（双目）重载为非成员函数，并将其声明为复数类的友元，两个操作数都是复数类的常引用。 • 将&lt;&lt;（双目）重载为非成员函数，并将其声明为复数类的友元，它的左操作数是std::ostream引用，右操作数为复数类的常引用，返回std::ostream引用，用以支持下面形式的输出：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cout &lt;&lt; a &lt;&lt; b;</span><br></pre></td></tr></table></figure>
+
+<p>该输出调用的是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">operator &lt;&lt; (operator &lt;&lt; (cout, a), b);</span><br></pre></td></tr></table></figure>
+
+<p>源代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//8_3.cpp</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Complex</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Complex(<span class="keyword">double</span> r = <span class="number">0.0</span>, <span class="keyword">double</span> i = <span class="number">0.0</span>) : real(r), imag(i) &#123; &#125;  </span><br><span class="line">    <span class="keyword">friend</span> Complex <span class="keyword">operator</span>+(<span class="keyword">const</span> Complex &amp;c1, <span class="keyword">const</span> Complex &amp;c2);</span><br><span class="line">    <span class="keyword">friend</span> Complex <span class="keyword">operator</span>-(<span class="keyword">const</span> Complex &amp;c1, <span class="keyword">const</span> Complex &amp;c2);</span><br><span class="line">    <span class="keyword">friend</span> ostream &amp; <span class="keyword">operator</span>&lt;&lt;(ostream &amp;out, <span class="keyword">const</span> Complex &amp;c);</span><br><span class="line"><span class="keyword">private</span>:    </span><br><span class="line">    <span class="keyword">double</span> real;  <span class="comment">//复数实部</span></span><br><span class="line">    <span class="keyword">double</span> imag;  <span class="comment">//复数虚部</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Complex <span class="keyword">operator</span>+(<span class="keyword">const</span> Complex &amp;c1, <span class="keyword">const</span> Complex &amp;c2)&#123;</span><br><span class="line">    <span class="keyword">return</span> Complex(c1.real+c2.real, c1.imag+c2.imag); </span><br><span class="line">&#125;</span><br><span class="line">Complex <span class="keyword">operator</span>-(<span class="keyword">const</span> Complex &amp;c1, <span class="keyword">const</span> Complex &amp;c2)&#123;</span><br><span class="line">    <span class="keyword">return</span> Complex(c1.real-c2.real, c1.imag-c2.imag); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ostream &amp; <span class="keyword">operator</span>&lt;&lt;(ostream &amp;out, <span class="keyword">const</span> Complex &amp;c)&#123;</span><br><span class="line">    out &lt;&lt; <span class="string">"("</span> &lt;&lt; c.real &lt;&lt; <span class="string">", "</span> &lt;&lt; c.imag &lt;&lt; <span class="string">")"</span>;</span><br><span class="line">    <span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;    </span><br><span class="line">    Complex c1(5, 4), c2(2, 10), c3;    </span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c1 = "</span> &lt;&lt; c1 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c2 = "</span> &lt;&lt; c2 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    c3 = c1 - c2;   <span class="comment">//使用重载运算符完成复数减法</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c3 = c1 - c2 = "</span> &lt;&lt; c3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    c3 = c1 + c2;   <span class="comment">//使用重载运算符完成复数加法</span></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"c3 = c1 + c2 = "</span> &lt;&lt; c3 &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-2-虚函数"><a href="#8-2-虚函数" class="headerlink" title="8.2 虚函数"></a>8.2 虚函数</h3><h4 id="8-2-1-虚函数"><a href="#8-2-1-虚函数" class="headerlink" title="8.2.1 虚函数"></a>8.2.1 虚函数</h4><ul>
 <li>用virtual关键字说明的函数</li>
 <li>虚函数是实现运行时多态性基础</li>
 <li>C++中的虚函数是动态绑定的函数</li>
@@ -1112,15 +1178,10 @@
 </ul>
 <p><strong>一般虚函数成员</strong></p>
 <ul>
-<li><p>虚函数的声明</p>
-<p>virtual 函数类型 函数名（形参表）;</p>
-</li>
-<li><p>虚函数声明只能出现在类定义中的函数原型声明中，而不能在成员函数实现的时候。</p>
-</li>
-<li><p>在派生类中可以对基类中的成员函数进行覆盖。</p>
-</li>
-<li><p>虚函数一般不声明为内联函数，因为对虚函数的调用需要动态绑定，而对内联函数的处理是静态的。</p>
-</li>
+<li>虚函数的声明：virtual 函数类型 函数名（形参表）;</li>
+<li>虚函数声明只能出现在类定义中的函数原型声明中，而不能在成员函数实现的时候。</li>
+<li>在派生类中可以对基类中的成员函数进行覆盖。</li>
+<li>虚函数一般不声明为内联函数，因为对虚函数的调用需要动态绑定，而对内联函数的处理是静态的。</li>
 </ul>
 <p><strong>virtual 关键字</strong></p>
 <ul>
@@ -1199,10 +1260,65 @@
 </ul>
 <p><strong>final</strong></p>
 <ul>
-<li><p>C++11提供的final，用来避免类被继承，或是基类的函数被改写 例： struct Base1 final { };</p>
-<p>struct Derived1 : Base1 { }; // 编译错误：Base1为final，不允许被继承</p>
-<p>struct Base2 { virtual void f() final; };</p>
-<p>struct Derived2 : Base2 { void f(); // 编译错误：Base2::f 为final，不允许被覆盖 };</p>
+<li><p>C++11提供的final，用来避免类被继承，或是基类的函数被改写 例： </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Base1</span> <span class="title">final</span> &#123;</span> &#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Derived1</span> :</span> Base1 &#123; &#125;; <span class="comment">// 编译错误：Base1为final，不允许被继承</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Base2</span> &#123;</span> <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> <span class="keyword">final</span></span>; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Derived2</span> :</span> Base2 &#123; <span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">()</span></span>; <span class="comment">// 编译错误：Base2::f 为final，不允许被覆盖 &#125;;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </li>
 </ul>
 
@@ -1548,7 +1664,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">160k</span>
+    <span title="Symbols count total">164k</span>
   
 
   
@@ -1557,7 +1673,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:25</span>
+    <span title="Reading time total">2:29</span>
   
 </div>
 
