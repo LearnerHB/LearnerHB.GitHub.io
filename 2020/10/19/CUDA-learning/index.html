@@ -98,16 +98,17 @@
 
 
 
-  <meta name="description" content="Innovating Today．Imagining Tomorrow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bing&#39;s Blog">
-<meta property="og:url" content="http://bingcs.com/archives/2019/07/index.html">
+  <meta name="description" content="[toc] 1. 关键概念Warp Divergence2. CUDA卷积CUDA卷积的优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CUDA编程">
+<meta property="og:url" content="http://bingcs.com/2020/10/19/CUDA-learning/index.html">
 <meta property="og:site_name" content="Bing&#39;s Blog">
-<meta property="og:description" content="Innovating Today．Imagining Tomorrow">
+<meta property="og:description" content="[toc] 1. 关键概念Warp Divergence2. CUDA卷积CUDA卷积的优化">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-10-19T10:58:30.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bing&#39;s Blog">
-<meta name="twitter:description" content="Innovating Today．Imagining Tomorrow">
+<meta name="twitter:title" content="CUDA编程">
+<meta name="twitter:description" content="[toc] 1. 关键概念Warp Divergence2. CUDA卷积CUDA卷积的优化">
 
 
 
@@ -117,7 +118,7 @@
 
   
   
-  <link rel="canonical" href="http://bingcs.com/archives/2019/07/">
+  <link rel="canonical" href="http://bingcs.com/2020/10/19/CUDA-learning/">
 
 
 
@@ -127,7 +128,7 @@
   };
 </script>
 
-  <title>Archive | Bing's Blog</title>
+  <title>CUDA编程 | Bing's Blog</title>
   
 
 
@@ -173,7 +174,7 @@
   
   
 
-  <div class="container page-archive">
+  <div class="container page-post-detail">
     <div class="headband">
       <a href="https://github.com/LearnerHB"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_left_darkblue_121621.png?resize=149%2C149" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
     </div>
@@ -265,7 +266,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -293,25 +294,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -358,217 +340,239 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 33 posts in total. Keep on posting.
-      </span>
-      
+  
 
-      
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingcs.com/2020/10/19/CUDA-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hu Bing">
+      <meta itemprop="description" content="Innovating Today．Imagining Tomorrow">
+      <meta itemprop="image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/2019-07-25-091507.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bing's Blog">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">CUDA编程
+
+              
+            
+          </h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-10-19 15:08:53 / Modified: 18:58:30" itemprop="dateCreated datePublished" datetime="2020-10-19T15:08:53+08:00">2020-10-19</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/31/TensorFlow_Learning/" itemprop="url">
+          
             
-              <span itemprop="name">TensorFlow Notes</span>
             
-          </a>
-        
-      </h2>
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2020/10/19/CUDA-learning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/10/19/CUDA-learning/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-31T10:41:35+08:00" content="2019-07-31">
-          07-31
-        </time>
-      </div>
+          
+          
 
-    </header>
-  </article>
+          
 
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span> Readings
+          
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">42</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">1 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/30/蓝色之阴翳与肉体之罪恶/" itemprop="url">
-            
-              <span itemprop="name">蓝色之阴翳与肉体之罪恶</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-30T10:43:57+08:00" content="2019-07-30">
-          07-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/29/从克莱因蓝谈我心中的极简主义/" itemprop="url">
-            
-              <span itemprop="name">从克莱因蓝谈我心中的极简主义</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-29T10:57:23+08:00" content="2019-07-29">
-          07-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/28/Cheat-sheet/" itemprop="url">
-            
-              <span itemprop="name">Scikit-learn Algorithm Cheat-sheet</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-28T22:24:05+08:00" content="2019-07-28">
-          07-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <p>[toc]</p>
+<h2 id="1-关键概念"><a href="#1-关键概念" class="headerlink" title="1. 关键概念"></a>1. 关键概念</h2><h3 id="Warp-Divergence"><a href="#Warp-Divergence" class="headerlink" title="Warp Divergence"></a>Warp Divergence</h3><h2 id="2-CUDA卷积"><a href="#2-CUDA卷积" class="headerlink" title="2. CUDA卷积"></a>2. CUDA卷积</h2><h3 id="CUDA卷积的优化"><a href="#CUDA卷积的优化" class="headerlink" title="CUDA卷积的优化"></a>CUDA卷积的优化</h3>
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/07/04/ML-Notes-1/" itemprop="url">
-            
-              <span itemprop="name">Machine Learning Models (1)</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-04T14:31:27+08:00" content="2019-07-04">
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/2019-06-27-035636.png" alt="Hu Bing WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/2019-09-06-155450.jpg" alt="Hu Bing Alipay">
+        <p>Alipay</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+ 
+   
+      
+      
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -588,8 +592,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -761,6 +774,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-关键概念"><span class="nav-text">1. 关键概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Warp-Divergence"><span class="nav-text">Warp Divergence</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-CUDA卷积"><span class="nav-text">2. CUDA卷积</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CUDA卷积的优化"><span class="nav-text">CUDA卷积的优化</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -909,6 +939,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -950,6 +984,8 @@
 
 
 
+
+  
 
 
   
