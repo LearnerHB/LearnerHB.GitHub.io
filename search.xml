@@ -127,12 +127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CUDA编程</title>
-    <url>/2020/10/19/CUDA-learning/</url>
-    <content><![CDATA[<p>[toc]</p>
-<h2 id="1-关键概念"><a href="#1-关键概念" class="headerlink" title="1. 关键概念"></a>1. 关键概念</h2><h3 id="Warp-Divergence"><a href="#Warp-Divergence" class="headerlink" title="Warp Divergence"></a>Warp Divergence</h3><h2 id="2-CUDA卷积"><a href="#2-CUDA卷积" class="headerlink" title="2. CUDA卷积"></a>2. CUDA卷积</h2><h3 id="CUDA卷积的优化"><a href="#CUDA卷积的优化" class="headerlink" title="CUDA卷积的优化"></a>CUDA卷积的优化</h3>]]></content>
-  </entry>
-  <entry>
     <title>学习笔记-《清华大学C++程序设计》</title>
     <url>/2020/09/21/%E7%AC%94%E8%AE%B0-%E3%80%8A%E6%B8%85%E5%8D%8E%E5%A4%A7%E5%AD%A6C-%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E3%80%8B/</url>
     <content><![CDATA[<h2 id="第四章-类与对象"><a href="#第四章-类与对象" class="headerlink" title="第四章 类与对象"></a>第四章 类与对象</h2><h2 id="第五章-数据的共享与保护"><a href="#第五章-数据的共享与保护" class="headerlink" title="第五章 数据的共享与保护"></a>第五章 数据的共享与保护</h2><ul>
