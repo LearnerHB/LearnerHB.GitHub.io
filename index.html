@@ -795,6 +795,247 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingcs.com/2020/12/02/IERG4160/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hu Bing">
+      <meta itemprop="description" content="Innovating Today．Imagining Tomorrow">
+      <meta itemprop="image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/2019-07-25-091507.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bing's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/12/02/IERG4160/" class="post-title-link" itemprop="url">Untitled</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-12-02 15:50:53 / Modified: 16:22:15" itemprop="dateCreated datePublished" datetime="2020-12-02T15:50:53+08:00">2020-12-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Symbols count in article: </span>
+                
+                <span title="Symbols count in article">1.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">1 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="IERG4160-Image-and-Video-Processing"><a href="#IERG4160-Image-and-Video-Processing" class="headerlink" title="IERG4160 Image and Video Processing"></a>IERG4160 Image and Video Processing</h1><h2 id="Lecture-07-Object-Recogonition"><a href="#Lecture-07-Object-Recogonition" class="headerlink" title="Lecture 07 Object Recogonition"></a>Lecture 07 Object Recogonition</h2><ul>
+<li>What is Object Recogonition</li>
+<li>Pipeline: image –&gt; feature –(classifier)–&gt; class label</li>
+<li>feature representation<ul>
+<li>Bag of words</li>
+<li>dictionary &lt;– K-means</li>
+</ul>
+</li>
+<li>local descriptor &lt;– HOG</li>
+<li>Spatial Pyramid / Part-based models (basic ideas)</li>
+<li>Classifier<ul>
+<li>K-means neighbor</li>
+</ul>
+</li>
+</ul>
+<h2 id="Lecture-08-Linear-Classifier"><a href="#Lecture-08-Linear-Classifier" class="headerlink" title="Lecture 08 Linear Classifier"></a>Lecture 08 Linear Classifier</h2><ul>
+<li>Binary Classificatoin</li>
+<li>Linear Classifier    f(x)=sign(wT+b)</li>
+<li>Perceptron Algorithm   w&lt;–w+a<em>Yi</em>Xi (when misclassified)<ul>
+<li>(linearly separable)</li>
+</ul>
+</li>
+<li>Support Vector Machine &lt;– maximize the margin</li>
+<li>Slack Variable &lt;– trade off</li>
+</ul>
+<h2 id="Lecture-09-Multi-class-Classification"><a href="#Lecture-09-Multi-class-Classification" class="headerlink" title="Lecture 09 Multi-class Classification"></a>Lecture 09 Multi-class Classification</h2><ul>
+<li>Basic concept</li>
+<li>Combine binary classifiers<ul>
+<li>One-vs-all  –  k</li>
+<li>All-vs-all  –  k(k-1)/2</li>
+<li>minimum # classifiers  – log(2)k</li>
+</ul>
+</li>
+</ul>
+<h2 id="Lecture-10-Deep-Learning"><a href="#Lecture-10-Deep-Learning" class="headerlink" title="Lecture 10 Deep Learning"></a>Lecture 10 Deep Learning</h2><ul>
+<li>Deep: multi-level conputation for feature</li>
+<li>Learning: end to end</li>
+<li>Simpified formulation</li>
+</ul>
+<h2 id="Lecture-11-CNN-Convolutional-Neural-Network"><a href="#Lecture-11-CNN-Convolutional-Neural-Network" class="headerlink" title="Lecture 11 CNN (Convolutional Neural Network)"></a>Lecture 11 CNN (Convolutional Neural Network)</h2><ul>
+<li>convolutional layer<ul>
+<li>3D kernel –&gt; single mask (h·w·n_i)</li>
+<li>multiple kernel –&gt; (h·w·n_i·n_o)</li>
+<li>Together –&gt; convolutional layer</li>
+</ul>
+</li>
+<li>activation</li>
+<li>Pooling</li>
+</ul>
+<h2 id="Lecture-10b-Training-Process"><a href="#Lecture-10b-Training-Process" class="headerlink" title="Lecture 10b Training Process"></a>Lecture 10b Training Process</h2><ul>
+<li>SGD: </li>
+<li>back-propagation</li>
+</ul>
+<h2 id="Lecture-12-Object-Detection"><a href="#Lecture-12-Object-Detection" class="headerlink" title="Lecture 12 Object Detection"></a>Lecture 12 Object Detection</h2><ul>
+<li><p>What is Object Detection </p>
+<ul>
+<li>bounding boxes</li>
+</ul>
+</li>
+<li><p>R-CNN / Fast R-CNN / Faster R-CNN (Basic idea)</p>
+<ul>
+<li>Share computation –&gt; improve efficiency</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+ 
+   
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+      	
+    
+    	
+      		
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://bingcs.com/2020/09/21/笔记-《清华大学C-程序设计》/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1829,219 +2070,6 @@
     
     	
     
-    	
-      		
-
-  
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://bingcs.com/2020/02/19/笔记-《睡眠革命》/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hu Bing">
-      <meta itemprop="description" content="Innovating Today．Imagining Tomorrow">
-      <meta itemprop="image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/2019-07-25-091507.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Bing's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/02/19/笔记-《睡眠革命》/" class="post-title-link" itemprop="url">读书笔记-《睡眠革命》</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-02-19 15:20:09" itemprop="dateCreated datePublished" datetime="2020-02-19T15:20:09+08:00">2020-02-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2020-09-30 09:46:39" itemprop="dateModified" datetime="2020-09-30T09:46:39+08:00">2020-09-30</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Reading-Thinking/" itemprop="url" rel="index"><span itemprop="name">Reading&Thinking</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Symbols count in article: </span>
-                
-                <span title="Symbols count in article">532</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">1 mins.</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Nick Littlehales
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2020/02/19/笔记-《睡眠革命》/">
-                Read more &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
- 
-   
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-      	
-    
   </section>
 
   
@@ -2090,7 +2118,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">33</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -2272,7 +2300,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">164k</span>
+    <span title="Symbols count total">165k</span>
   
 
   
@@ -2281,7 +2309,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:29</span>
+    <span title="Reading time total">2:30</span>
   
 </div>
 
