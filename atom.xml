@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingcs.com/"/>
-  <updated>2020-12-02T08:26:28.379Z</updated>
+  <updated>2020-12-02T08:44:10.106Z</updated>
   <id>http://bingcs.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://bingcs.com/2020/12/02/IERG4160/"/>
     <id>http://bingcs.com/2020/12/02/IERG4160/</id>
     <published>2020-12-02T08:22:54.000Z</published>
-    <updated>2020-12-02T08:26:28.379Z</updated>
+    <updated>2020-12-02T08:44:10.106Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a><h2 id="Lecture-07-Object-Recogonition"><a href="#Lecture-07-Object-Recogonition" class="headerlink" title="Lecture 07 Object Recogonition"></a>Lecture 07 Object Recogonition</h2><ul><li>What is Object Recogonition</li><li>Pipeline: image –&gt; feature –(classifier)–&gt; class label</li><li>feature representation<ul><li>Bag of words</li><li>dictionary &lt;– K-means</li></ul></li><li>local descriptor &lt;– HOG</li><li>Spatial Pyramid / Part-based models (basic ideas)</li><li>Classifier<ul><li>K-means neighbor</li></ul></li></ul><h2 id="Lecture-08-Linear-Classifier"><a href="#Lecture-08-Linear-Classifier" class="headerlink" title="Lecture 08 Linear Classifier"></a>Lecture 08 Linear Classifier</h2><ul><li>Binary Classificatoin</li><li>Linear Classifier    f(x)=sign(wT+b)</li><li>Perceptron Algorithm   w&lt;–w+a<em>Yi</em>Xi (when misclassified)<ul><li>(linearly separable)</li></ul></li><li>Support Vector Machine &lt;– maximize the margin</li><li>Slack Variable &lt;– trade off</li></ul><h2 id="Lecture-09-Multi-class-Classification"><a href="#Lecture-09-Multi-class-Classification" class="headerlink" title="Lecture 09 Multi-class Classification"></a>Lecture 09 Multi-class Classification</h2><ul><li>Basic concept</li><li>Combine binary classifiers<ul><li>One-vs-all  –  k</li><li>All-vs-all  –  k(k-1)/2</li><li>minimum # classifiers  – log(2)k</li></ul></li></ul><h2 id="Lecture-10-Deep-Learning"><a href="#Lecture-10-Deep-Learning" class="headerlink" title="Lecture 10 Deep Learning"></a>Lecture 10 Deep Learning</h2><ul><li>Deep: multi-level conputation for feature</li><li>Learning: end to end</li><li>Simpified formulation</li></ul><h2 id="Lecture-11-CNN-Convolutional-Neural-Network"><a href="#Lecture-11-CNN-Convolutional-Neural-Network" class="headerlink" title="Lecture 11 CNN (Convolutional Neural Network)"></a>Lecture 11 CNN (Convolutional Neural Network)</h2><ul><li>convolutional layer<ul><li>3D kernel –&gt; single mask (h·w·n_i)</li><li>multiple kernel –&gt; (h·w·n_i·n_o)</li><li>Together –&gt; convolutional layer</li></ul></li><li>activation</li><li>Pooling</li></ul><h2 id="Lecture-10b-Training-Process"><a href="#Lecture-10b-Training-Process" class="headerlink" title="Lecture 10b Training Process"></a>Lecture 10b Training Process</h2><ul><li>SGD: </li><li>back-propagation</li></ul><h2 id="Lecture-12-Object-Detection"><a href="#Lecture-12-Object-Detection" class="headerlink" title="Lecture 12 Object Detection"></a>Lecture 12 Object Detection</h2><ul><li><p>What is Object Detection </p><ul><li>bounding boxes</li></ul></li><li><p>R-CNN / Fast R-CNN / Faster R-CNN (Basic idea)</p><ul><li>Share computation –&gt; improve efficiency</li></ul></li></ul>]]></content>
     
