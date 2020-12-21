@@ -2563,20 +2563,20 @@
 
 <p>Mac终端(Terminal)凭借Unix特性让用户爱不释手，但作为程序员们频繁使用的软件，其默认界面的文字阅读常令人感到吃力。我将借助oh-my-zsh对其进行界面上的美化，让Terminal更加美观易读。</p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png" alt="未改造之前的Terminal"></p>
-<h2 id="准备：安装Homebrew"><a href="#准备：安装Homebrew" class="headerlink" title="准备：安装Homebrew"></a>准备：安装Homebrew</h2><p>后续的部分插件安装需要用到homebrew，所以可以提前安装。</p>
+<h2 id="0-准备：安装Homebrew"><a href="#0-准备：安装Homebrew" class="headerlink" title="0. 准备：安装Homebrew"></a>0. 准备：安装Homebrew</h2><p>后续的部分插件安装需要用到homebrew，所以可以提前安装。</p>
 <p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
 <p>如果你的macOS版本早于Catalina，你需要手动安装zsh：</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 zsh</span></span><br><span class="line">brew install zsh</span><br><span class="line"><span class="comment"># 设置zsh为你的默认shell</span></span><br><span class="line">chsh -s /usr/<span class="built_in">local</span>/bin/zsh</span><br></pre></td></tr></table></figure>
 
-<h2 id="配置Mac终端主题"><a href="#配置Mac终端主题" class="headerlink" title="配置Mac终端主题"></a>配置Mac终端主题</h2><ol>
+<h2 id="1-配置Mac终端主题"><a href="#1-配置Mac终端主题" class="headerlink" title="1. 配置Mac终端主题"></a>1. 配置Mac终端主题</h2><ol>
 <li>在 <a href="https://github.com/lysyi3m/macos-terminal-themes" target="_blank" rel="noopener">OSX主题的项目主页</a> 里面选择自己喜欢的主题；</li>
 <li>把项目Clone或者Download下来；</li>
 <li>在 <code>themes/</code> 文件夹下，双击相应的*.terminal 文件。一个对应主题的终端窗口将会弹出；</li>
 <li>将当前主题设置为默认：菜单里找到 <em>Shell -&gt; Use Settings as Default</em> 或 <em>Shell -&gt; 将设置用作默认设置</em> 。</li>
 </ol>
-<h2 id="安装-oh-my-zsh"><a href="#安装-oh-my-zsh" class="headerlink" title="安装 oh-my-zsh"></a>安装 oh-my-zsh</h2><p>参考 <a href="https://ohmyz.sh" target="_blank" rel="noopener">Oh My Zsh 主页</a>。Oh My Zsh 是一个令人愉快的、开源的、社区驱动的管理zsh配置的框架，安装十分简单，在Mac终端下输入如下代码即可。</p>
+<h2 id="2-安装-oh-my-zsh"><a href="#2-安装-oh-my-zsh" class="headerlink" title="2. 安装 oh-my-zsh"></a>2. 安装 oh-my-zsh</h2><p>参考 <a href="https://ohmyz.sh" target="_blank" rel="noopener">Oh My Zsh 主页</a>。Oh My Zsh 是一个令人愉快的、开源的、社区驱动的管理zsh配置的框架，安装十分简单，在Mac终端下输入如下代码即可。</p>
 <p><code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></p>
-<h2 id="安装-oh-my-zsh-主题"><a href="#安装-oh-my-zsh-主题" class="headerlink" title="安装 oh-my-zsh 主题"></a>安装 oh-my-zsh 主题</h2><p>如果不想鼓捣第三方主题，oh-my-zsh内置的主题其实也完全足够。只需要：</p>
+<h2 id="3-安装-oh-my-zsh-主题"><a href="#3-安装-oh-my-zsh-主题" class="headerlink" title="3. 安装 oh-my-zsh 主题"></a>3. 安装 oh-my-zsh 主题</h2><p>如果不想鼓捣第三方主题，oh-my-zsh内置的主题其实也完全足够。只需要：</p>
 <ol>
 <li>在<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes" target="_blank" rel="noopener">内置主题列表</a>寻找你想要的主题；</li>
 <li>在<code>~/.zshrc</code>配置文件里设置<code>ZSH_THEME</code>为你想要的主题名称；如果你不想使用任何内置主题，也可以把这个字段设置为空：<code>ZSH_THEME=&quot;&quot;</code></li>
@@ -2584,7 +2584,7 @@
 </ol>
 <p>当然，如果想要安装第三方主题，也可以在 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes" target="_blank" rel="noopener">这里</a> 查看。</p>
 <p>![安装完zsh后的终端](/Users/bing/Library/Application Support/typora-user-images/image-20201221114628994.png)</p>
-<h2 id="安装oh-my-zsh插件"><a href="#安装oh-my-zsh插件" class="headerlink" title="安装oh-my-zsh插件"></a>安装oh-my-zsh插件</h2><p>Oh-my-zsh提供了丰富的插件，你可以通过查看Github上地 <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">plugins目录</a>或者 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">wiki</a>来获知哪些插件是可用的。除了许多自带的插件可以直接在~/.zshrc 文件的 plugins字段按如下方式使用，也可以便捷地安装其他的插件。下面列举5个插件，更多地插件可以自行寻找。</p>
+<h2 id="4-安装oh-my-zsh插件"><a href="#4-安装oh-my-zsh插件" class="headerlink" title="4. 安装oh-my-zsh插件"></a>4. 安装oh-my-zsh插件</h2><p>Oh-my-zsh提供了丰富的插件，你可以通过查看Github上地 <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">plugins目录</a>或者 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">wiki</a>来获知哪些插件是可用的。除了许多自带的插件可以直接在~/.zshrc 文件的 plugins字段按如下方式使用，也可以便捷地安装其他的插件。下面列举5个插件，更多地插件可以自行寻找。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ~/.zshrc:</span></span><br><span class="line">plugins=(</span><br><span class="line">  git														</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
 <h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><blockquote>
@@ -2610,8 +2610,8 @@
 <p>非自带插件。输入时按右方向键→自动补全命令。</p>
 </blockquote>
 <p>用 <code>brew install zsh-autosuggestions</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>
-<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>至此， 你应该可以拥有一个美观易用的terminal了。开始coding吧！</p>
-<p>![改造之后的Terminal](/Users/bing/Library/Application Support/typora-user-images/image-20201221135619350.png)</p>
+<h2 id="5-完成"><a href="#5-完成" class="headerlink" title="5. 完成"></a>5. 完成</h2><p>至此， 你应该可以拥有一个美观易用的terminal了。开始coding吧！</p>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-070158.png" alt="image-20201221150157035"></p>
 <h2 id="Optional-zsh安装后的conda使用：报错与解决"><a href="#Optional-zsh安装后的conda使用：报错与解决" class="headerlink" title="(Optional) zsh安装后的conda使用：报错与解决"></a>(Optional) zsh安装后的conda使用：报错与解决</h2><p>在安装完zsh，开始要使用原本环境中conda相关指令的时候出现错误，以下是错误内容和相应的解决方案。</p>
 <ol>
 <li><p><code>zsh：command not find:conda</code></p>
