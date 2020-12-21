@@ -141,6 +141,8 @@
 
 <p>Mac终端(Terminal)凭借Unix特性让用户爱不释手，但作为程序员们频繁使用的软件，其默认界面的文字阅读常令人感到吃力。我将借助oh-my-zsh对其进行界面上的美化，让Terminal更加美观易读。</p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png" alt="未改造之前的Terminal"></p>
+<center>Figure 1. 原本的Terminal界面</center>
+
 <h2 id="0-准备：安装Homebrew"><a href="#0-准备：安装Homebrew" class="headerlink" title="0. 准备：安装Homebrew"></a>0. 准备：安装Homebrew</h2><p>后续的部分插件安装需要用到homebrew，所以可以提前安装。</p>
 <p><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
 <p>如果你的macOS版本早于Catalina，你需要手动安装zsh：</p>
@@ -161,7 +163,6 @@
 <li>激活设置<code>source ~/.zshrc</code></li>
 </ol>
 <p>当然，如果想要安装第三方主题，也可以在 <a href="https://github.com/robbyrussell/oh-my-zsh/wiki/External-themes" target="_blank" rel="noopener">这里</a> 查看。</p>
-<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-074740.png" alt="image-20201221154737178"></p>
 <h2 id="4-安装oh-my-zsh插件"><a href="#4-安装oh-my-zsh插件" class="headerlink" title="4. 安装oh-my-zsh插件"></a>4. 安装oh-my-zsh插件</h2><p>Oh-my-zsh提供了丰富的插件，你可以通过查看Github上地 <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">plugins目录</a>或者 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">wiki</a>来获知哪些插件是可用的。除了许多自带的插件可以直接在~/.zshrc 文件的 plugins字段按如下方式使用，也可以便捷地安装其他的插件。下面列举5个插件，更多地插件可以自行寻找。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ~/.zshrc:</span></span><br><span class="line">plugins=(</span><br><span class="line">  git														</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
@@ -190,6 +191,8 @@
 <p>用 <code>brew install zsh-autosuggestions</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>
 <h2 id="5-完成"><a href="#5-完成" class="headerlink" title="5. 完成"></a>5. 完成</h2><p>至此， 你应该可以拥有一个美观易用的terminal了。开始coding吧！</p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-070158.png" alt="image-20201221150157035"></p>
+<center>Figure 2. 配置之后的Terminal界面</center>
+
 <h2 id="Optional-zsh安装后的conda使用：报错与解决"><a href="#Optional-zsh安装后的conda使用：报错与解决" class="headerlink" title="(Optional) zsh安装后的conda使用：报错与解决"></a>(Optional) zsh安装后的conda使用：报错与解决</h2><p>在安装完zsh，开始要使用原本环境中conda相关指令的时候出现错误，以下是错误内容和相应的解决方案。</p>
 <ol>
 <li><p><code>zsh：command not find:conda</code></p>
