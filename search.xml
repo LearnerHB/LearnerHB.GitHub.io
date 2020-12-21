@@ -2587,23 +2587,26 @@
 <h2 id="安装oh-my-zsh插件"><a href="#安装oh-my-zsh插件" class="headerlink" title="安装oh-my-zsh插件"></a>安装oh-my-zsh插件</h2><p>Oh-my-zsh提供了丰富的插件，你可以通过查看Github上地 <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">plugins目录</a>或者 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">wiki</a>来获知哪些插件是可用的。除了许多自带的插件可以直接在~/.zshrc 文件的 plugins字段按如下方式使用，也可以便捷地安装其他的插件。下面列举5个插件，更多地插件可以自行寻找。</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># ~/.zshrc:</span></span><br><span class="line">plugins=(</span><br><span class="line">  git														</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-git"><a href="#1-git" class="headerlink" title="1. git"></a>1. git</h3><blockquote>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><blockquote>
 <p>自带插件。可以使用缩写命令, 比如 <code>gaa</code> -&gt; <code>git add --all</code>, 通过<code>alias | grep git</code>查看所有支持缩写命令。直接按上面的方式加入plugins字段。</p>
 </blockquote>
-<h3 id="2-extract"><a href="#2-extract" class="headerlink" title="2. extract"></a>2. extract</h3><blockquote>
+<h3 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h3><blockquote>
 <p>自带插件。不用再使用复杂的<code>tar</code>来解压。直接按上面的方式加入plugins字段。</p>
 </blockquote>
-<h3 id="3-autojump"><a href="#3-autojump" class="headerlink" title="3. autojump"></a>3. autojump</h3><blockquote>
+<h3 id="sublime"><a href="#sublime" class="headerlink" title="sublime"></a>sublime</h3><blockquote>
+<p>自带插件。可以使用sublime text打开文件/文件夹，用 <code>st</code> 指令直接打开sublime text (前提是已经安装)，用<code>st + 文件/文件夹</code> 可以用sublime打开置顶文件夹 。直接按上面的方式加入plugins字段。</p>
+</blockquote>
+<h3 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h3><blockquote>
 <p>非自带插件。使用<code>j</code>命令直接快速进入某个目录, 比如 <code>j Downloads</code> -&gt; <code>cd ~/Downloads</code>。</p>
 </blockquote>
 <p>用 <code>brew install autojump</code> 安装之后，按照提示在<code>~/.zshrc</code>配置文件添加:</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">[ -f /usr/<span class="built_in">local</span>/etc/profile.d/autojump.sh ] &amp;&amp; . /usr/<span class="built_in">local</span>/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-zsh-syntax-highlighting"><a href="#4-zsh-syntax-highlighting" class="headerlink" title="4. zsh-syntax-highlighting"></a>4. zsh-syntax-highlighting</h3><blockquote>
+<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><blockquote>
 <p>非自带插件。命令高亮，让命令五彩缤纷。</p>
 </blockquote>
 <p>用  <code>brew install zsh-syntax-highlighting</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>
-<h3 id="5-zsh-autosuggestions"><a href="#5-zsh-autosuggestions" class="headerlink" title="5. zsh-autosuggestions"></a>5. zsh-autosuggestions</h3><blockquote>
+<h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h3><blockquote>
 <p>非自带插件。输入时按右方向键→自动补全命令。</p>
 </blockquote>
 <p>用 <code>brew install zsh-autosuggestions</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>

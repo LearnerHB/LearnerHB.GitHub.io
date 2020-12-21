@@ -106,7 +106,7 @@
 <meta property="og:description" content="oh-my-zsh">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png">
-<meta property="og:updated_time" content="2020-12-21T05:56:53.883Z">
+<meta property="og:updated_time" content="2020-12-21T06:27:01.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac终端改造计划">
 <meta name="twitter:description" content="oh-my-zsh">
@@ -402,7 +402,7 @@
                 
               
 
-              <time title="Created: 2020-12-21 10:21:28 / Modified: 13:56:53" itemprop="dateCreated datePublished" datetime="2020-12-21T10:21:28+08:00">2020-12-21</time>
+              <time title="Created: 2020-12-21 10:21:28 / Modified: 14:27:01" itemprop="dateCreated datePublished" datetime="2020-12-21T10:21:28+08:00">2020-12-21</time>
             
 
             
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">2.7k</span>
+                <span title="Symbols count in article">2.8k</span>
               
 
               
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">2 mins.</span>
+                <span title="Reading time">3 mins.</span>
               
             </div>
           
@@ -517,23 +517,26 @@
 <h2 id="安装oh-my-zsh插件"><a href="#安装oh-my-zsh插件" class="headerlink" title="安装oh-my-zsh插件"></a>安装oh-my-zsh插件</h2><p>Oh-my-zsh提供了丰富的插件，你可以通过查看Github上地 <a href="https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins" target="_blank" rel="noopener">plugins目录</a>或者 <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins" target="_blank" rel="noopener">wiki</a>来获知哪些插件是可用的。除了许多自带的插件可以直接在~/.zshrc 文件的 plugins字段按如下方式使用，也可以便捷地安装其他的插件。下面列举5个插件，更多地插件可以自行寻找。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ~/.zshrc:</span></span><br><span class="line">plugins=(</span><br><span class="line">  git														</span><br><span class="line">  zsh-syntax-highlighting</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<h3 id="1-git"><a href="#1-git" class="headerlink" title="1. git"></a>1. git</h3><blockquote>
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><blockquote>
 <p>自带插件。可以使用缩写命令, 比如 <code>gaa</code> -&gt; <code>git add --all</code>, 通过<code>alias | grep git</code>查看所有支持缩写命令。直接按上面的方式加入plugins字段。</p>
 </blockquote>
-<h3 id="2-extract"><a href="#2-extract" class="headerlink" title="2. extract"></a>2. extract</h3><blockquote>
+<h3 id="extract"><a href="#extract" class="headerlink" title="extract"></a>extract</h3><blockquote>
 <p>自带插件。不用再使用复杂的<code>tar</code>来解压。直接按上面的方式加入plugins字段。</p>
 </blockquote>
-<h3 id="3-autojump"><a href="#3-autojump" class="headerlink" title="3. autojump"></a>3. autojump</h3><blockquote>
+<h3 id="sublime"><a href="#sublime" class="headerlink" title="sublime"></a>sublime</h3><blockquote>
+<p>自带插件。可以使用sublime text打开文件/文件夹，用 <code>st</code> 指令直接打开sublime text (前提是已经安装)，用<code>st + 文件/文件夹</code> 可以用sublime打开置顶文件夹 。直接按上面的方式加入plugins字段。</p>
+</blockquote>
+<h3 id="autojump"><a href="#autojump" class="headerlink" title="autojump"></a>autojump</h3><blockquote>
 <p>非自带插件。使用<code>j</code>命令直接快速进入某个目录, 比如 <code>j Downloads</code> -&gt; <code>cd ~/Downloads</code>。</p>
 </blockquote>
 <p>用 <code>brew install autojump</code> 安装之后，按照提示在<code>~/.zshrc</code>配置文件添加:</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[ -f /usr/<span class="built_in">local</span>/etc/profile.d/autojump.sh ] &amp;&amp; . /usr/<span class="built_in">local</span>/etc/profile.d/autojump.sh</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-zsh-syntax-highlighting"><a href="#4-zsh-syntax-highlighting" class="headerlink" title="4. zsh-syntax-highlighting"></a>4. zsh-syntax-highlighting</h3><blockquote>
+<h3 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h3><blockquote>
 <p>非自带插件。命令高亮，让命令五彩缤纷。</p>
 </blockquote>
 <p>用  <code>brew install zsh-syntax-highlighting</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>
-<h3 id="5-zsh-autosuggestions"><a href="#5-zsh-autosuggestions" class="headerlink" title="5. zsh-autosuggestions"></a>5. zsh-autosuggestions</h3><blockquote>
+<h3 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a>zsh-autosuggestions</h3><blockquote>
 <p>非自带插件。输入时按右方向键→自动补全命令。</p>
 </blockquote>
 <p>用 <code>brew install zsh-autosuggestions</code> 完成安装。按照安装完成后的提示，在~/.zshrc文件中进行相应的配置。</p>
@@ -867,7 +870,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备：安装Homebrew"><span class="nav-text">准备：安装Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Mac终端主题"><span class="nav-text">配置Mac终端主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-oh-my-zsh"><span class="nav-text">安装 oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-oh-my-zsh-主题"><span class="nav-text">安装 oh-my-zsh 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装oh-my-zsh插件"><span class="nav-text">安装oh-my-zsh插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-git"><span class="nav-text">1. git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-extract"><span class="nav-text">2. extract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-autojump"><span class="nav-text">3. autojump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-zsh-syntax-highlighting"><span class="nav-text">4. zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-zsh-autosuggestions"><span class="nav-text">5. zsh-autosuggestions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成"><span class="nav-text">完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-zsh安装后的conda使用：报错与解决"><span class="nav-text">(Optional) zsh安装后的conda使用：报错与解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备：安装Homebrew"><span class="nav-text">准备：安装Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Mac终端主题"><span class="nav-text">配置Mac终端主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-oh-my-zsh"><span class="nav-text">安装 oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-oh-my-zsh-主题"><span class="nav-text">安装 oh-my-zsh 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装oh-my-zsh插件"><span class="nav-text">安装oh-my-zsh插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-text">git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extract"><span class="nav-text">extract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublime"><span class="nav-text">sublime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autojump"><span class="nav-text">autojump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions"><span class="nav-text">zsh-autosuggestions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完成"><span class="nav-text">完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-zsh安装后的conda使用：报错与解决"><span class="nav-text">(Optional) zsh安装后的conda使用：报错与解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
