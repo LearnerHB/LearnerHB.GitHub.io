@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Bing&#39;s Blog</title>
-  
+  <icon>https://www.gravatar.com/avatar/c9223a37a5cee0efbf7803d82948b304</icon>
   <subtitle>Innovating Today. Imagining Tomorrow.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>Hu Bing</name>
-    
+    <email>hubingcs@163.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
