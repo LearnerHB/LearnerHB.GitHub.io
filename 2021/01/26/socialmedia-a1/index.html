@@ -107,7 +107,7 @@
 <meta property="og:description" content="Course Assignment">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-01-30-064608.png">
-<meta property="og:updated_time" content="2021-01-30T07:01:18.487Z">
+<meta property="og:updated_time" content="2021-01-30T13:12:51.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Social Media Analysis(1)">
 <meta name="twitter:description" content="Course Assignment">
@@ -420,7 +420,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2021-01-30 15:01:18" itemprop="dateModified" datetime="2021-01-30T15:01:18+08:00">2021-01-30</time>
+                <time title="Modified: 2021-01-30 21:12:51" itemprop="dateModified" datetime="2021-01-30T21:12:51+08:00">2021-01-30</time>
               
             
           </span>
@@ -484,7 +484,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">882</span>
+                <span title="Symbols count in article">2.3k</span>
               
 
               
@@ -498,7 +498,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">1 mins.</span>
+                <span title="Reading time">2 mins.</span>
               
             </div>
           
@@ -522,9 +522,15 @@
       
         <a id="more"></a>
 
-<h2 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Let there be a system having 10 discrete energy levels, from 1 to 10. Let N be the sum of the digits of your student ID, e.g., if your SID = 1155012345, then N = 27. Let Pi = Ni/N for i=1 to 10 be the probability that the system is at an energy level i. </p>
-<p>Calculate the <strong>Shannon entropy</strong> of the system and show your steps in a necessary detail such that I can know you get the answer by yourself (e.g., not by running a computer program written by someone else).</p>
-<h3 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h3><p>My student ID is 1155151103 so N = 23. </p>
+<h2 id="1-Shannon-Entropy"><a href="#1-Shannon-Entropy" class="headerlink" title="1. Shannon Entropy"></a>1. Shannon Entropy</h2><ul>
+<li><strong>Description</strong></li>
+</ul>
+<p>Let there be a system having 10 discrete energy levels, from 1 to 10. Let N be the sum of the digits of your student ID, e.g., if your SID = 1155012345, then N = 27. Let Pi = Ni/N for i=1 to 10 be the probability that the system is at an energy level i. </p>
+<p>Calculate the <strong>Shannon entropy</strong> of the system.</p>
+<ul>
+<li><strong>Solution</strong></li>
+</ul>
+<p>My student ID is 1155151103 so N = 23. </p>
 <p>So Ni (for i = 1 to 10) is {1/23, 1/23, 5/23, 5/23, 1/23, 5/23, 1/23, 1/23, 0, 3/23}. And We calculate Shannon Entropy using the formulation shown below. </p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-01-30-064608.png" alt="image-20210129113456540"></p>
 <p>We can first calculate the information content of each energy level of the system. </p>
@@ -534,7 +540,15 @@
 <p>So the calculation result of H(X) is: </p>
 <p>H(X) = -(1/23*(-4.52) + 1/23*(-4.52) + 5/23*(-2.20) +  5/23*(-2.20) + 1/23*(-4.52) + 5/23*(-2.20) + 1/23*(-4.52) + 1/23*(-4.52) + 0 + 3/23*(-2.93)) = 2.80</p>
 <p>So the Shannon entropy of this system is 2.80.</p>
-<h2 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h2><h2 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h2>
+<h2 id="2-What-is-Friston’s-Free-Energy-Principle-FEP"><a href="#2-What-is-Friston’s-Free-Energy-Principle-FEP" class="headerlink" title="2. What is Friston’s Free Energy Principle (FEP)?"></a>2. What is Friston’s Free Energy Principle (FEP)?</h2><h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>In a word, Friston’s Free Energy Priciple (FEP) is used to describe that every self-organizing system in equilibrium tends to be in a state of minimal free energy. </p>
+<p>In Friston’s assumption, FEP could be applied to the whole world, including not only the perception, motion control or memory of our brains or our body, but also the biological evolution or the changes in the natural environment. </p>
+<h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><h4 id="formulation"><a href="#formulation" class="headerlink" title="formulation"></a>formulation</h4><p><strong>Free energy = Internal energy - Entropy</strong></p>
+<p>–&gt; Error  = real case - prediction</p>
+<p>In this formulation, internal energy refers to energy of sensor data for example that received through perception. And entropy is “calculated” by a probably model which is constructed by our brain (the agent) to describe the sensor data. </p>
+<p>To make it easy, just see internal energy as “real case”, entropy as “prediction” and free energy as “prediction error”. The main goal of our brain perceiving the circumstances is to predict the changes of the circumstances. If our brain could predict it correctly, we know that it result in a smallest prediction error. </p>
+<p>To get the minimal free energy, mathematically, one way is to increase the entropy (change our probably model to get better prediction result), another is to decrease internal energy (change the circumstances or choose other real case to make it more close to our prediction).</p>
+<h4 id="Markov-blanket"><a href="#Markov-blanket" class="headerlink" title="Markov blanket"></a>Markov blanket</h4><p>Markov blanket is a key part of FEP. By restricting the interaction between inside and outside of the “blanket”, it proctect the internal state from the influence of the enviroment and prevent the external state from being changed by the agent (e.g. our brain). It is like a “cell membrane” or those diaphragm in our body to seperate our organs. </p>
+<h2 id="3-How-can-FEP-be-applied-to-explain-the-information-dynamics-in-social-media"><a href="#3-How-can-FEP-be-applied-to-explain-the-information-dynamics-in-social-media" class="headerlink" title="3. How can FEP be applied to explain the information dynamics in social media?"></a>3. How can FEP be applied to explain the information dynamics in social media?</h2>
       
     </div>
 
@@ -836,7 +850,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-1"><span class="nav-text">Question 1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Answer"><span class="nav-text">Answer</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-2"><span class="nav-text">Question 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Question-3"><span class="nav-text">Question 3</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Shannon-Entropy"><span class="nav-text">1. Shannon Entropy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-What-is-Friston’s-Free-Energy-Principle-FEP"><span class="nav-text">2. What is Friston’s Free Energy Principle (FEP)?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Description"><span class="nav-text">Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Definition"><span class="nav-text">Definition</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#formulation"><span class="nav-text">formulation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Markov-blanket"><span class="nav-text">Markov blanket</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-How-can-FEP-be-applied-to-explain-the-information-dynamics-in-social-media"><span class="nav-text">3. How can FEP be applied to explain the information dynamics in social media?</span></a></li></ol></div>
             
 
           </div>
@@ -870,7 +884,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">169k</span>
+    <span title="Symbols count total">171k</span>
   
 
   
@@ -879,7 +893,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:34</span>
+    <span title="Reading time total">2:35</span>
   
 </div>
 
