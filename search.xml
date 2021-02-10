@@ -165,11 +165,6 @@
       </categories>
   </entry>
   <entry>
-    <title>socialmedia_a2</title>
-    <url>/2021/02/09/socialmedia-a2/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Social Media Analysis (1)</title>
     <url>/2021/01/26/socialmedia-a1/</url>
     <content><![CDATA[<a id="more"></a>
@@ -217,8 +212,7 @@
   <entry>
     <title>Mac终端改造计划</title>
     <url>/2020/12/21/macTerminalRebuild/</url>
-    <content><![CDATA[<p>[toc]</p>
-<a id="more"></a>
+    <content><![CDATA[<a id="more"></a>
 
 <p>Mac终端(Terminal)凭借Unix特性让用户爱不释手，但作为程序员们频繁使用的软件，其默认界面的文字阅读常令人感到吃力。我将借助oh-my-zsh对其进行界面上的美化，让Terminal更加美观易读。</p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png" alt="未改造之前的Terminal"></p>
