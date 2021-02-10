@@ -108,7 +108,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png">
 <meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-070158.png">
-<meta property="og:updated_time" content="2021-01-01T04:14:07.256Z">
+<meta property="og:updated_time" content="2021-02-10T03:26:05.044Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac终端改造计划">
 <meta name="twitter:description" content="oh-my-zsh">
@@ -421,7 +421,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2021-01-01 12:14:07" itemprop="dateModified" datetime="2021-01-01T12:14:07+08:00">2021-01-01</time>
+                <time title="Modified: 2021-02-10 11:26:05" itemprop="dateModified" datetime="2021-02-10T11:26:05+08:00">2021-02-10</time>
               
             
           </span>
@@ -485,7 +485,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">2.6k</span>
+                <span title="Symbols count in article">3k</span>
               
 
               
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">2 mins.</span>
+                <span title="Reading time">3 mins.</span>
               
             </div>
           
@@ -521,7 +521,8 @@
       
 
       
-        <a id="more"></a>
+        <p>[toc]</p>
+<a id="more"></a>
 
 <p>Mac终端(Terminal)凭借Unix特性让用户爱不释手，但作为程序员们频繁使用的软件，其默认界面的文字阅读常令人感到吃力。我将借助oh-my-zsh对其进行界面上的美化，让Terminal更加美观易读。</p>
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-023914.png" alt="未改造之前的Terminal"></p>
@@ -577,6 +578,8 @@
 <p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2020-12-21-070158.png" alt="image-20201221150157035"></p>
 <center>Figure 2. 配置之后的Terminal界面</center>
 
+
+
 <h2 id="Optional-zsh安装后的conda使用：报错与解决"><a href="#Optional-zsh安装后的conda使用：报错与解决" class="headerlink" title="(Optional) zsh安装后的conda使用：报错与解决"></a>(Optional) zsh安装后的conda使用：报错与解决</h2><p>在安装完zsh，开始要使用原本环境中conda相关指令的时候出现错误，以下是错误内容和相应的解决方案。</p>
 <ol>
 <li><p><code>zsh：command not find:conda</code></p>
@@ -602,6 +605,18 @@
 <p><strong>解决</strong>：用<code>source activate</code> 重新激活一下activate，这时候当前环境会变更到(base)，说明activate指令可以正常运行了。</p>
 </li>
 </ol>
+<h2 id="Optional-zsh自定义快捷指令"><a href="#Optional-zsh自定义快捷指令" class="headerlink" title="(Optional) zsh自定义快捷指令"></a>(Optional) zsh自定义快捷指令</h2><p>平时使用terminal的时候，我们输入很长的指令往往会感到繁琐头疼。我们可以通过修改zshrc文件来设置快捷指令。</p>
+<p>比如想要用安装的Typora软件来打开某个Markdown文件，我们需要命令行输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a "Typora" filename.md</span><br></pre></td></tr></table></figure>
+
+<p>前摇过长，不能忍。</p>
+<p>要实现类似 <code>st filename.md</code> 这种用Sublime Text快捷打开文件的操作，我们需要向~/.zshrc文件添加一行<code>alias</code>指令替换：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 把 tp 指定为 open -a <span class="string">"Typora"</span>，并添加到 ~/.zshrc 文件末尾</span></span><br><span class="line">echo "alias tp="open -a "Typora" " " &gt;&gt; ~/.zshrc</span><br><span class="line"><span class="meta">#</span><span class="bash"> 执行立即生效</span></span><br><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>然后试试</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp filename.md</span><br></pre></td></tr></table></figure>
+
+<p>可以发现已经可以快捷打开某文件。同理可以自行设置其他的快捷指令。:-)</p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
 <li><a href="https://ohmyz.sh" target="_blank" rel="noopener">Oh My Zsh - 官网</a></li>
 <li><a href="https://github.com/ohmyzsh" target="_blank" rel="noopener">Oh My Zsh - Github主页</a></li>
@@ -740,7 +755,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">34</span>
+                    <span class="site-state-item-count">35</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -909,7 +924,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-准备：安装Homebrew"><span class="nav-text">0. 准备：安装Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-配置Mac终端主题"><span class="nav-text">1. 配置Mac终端主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装-oh-my-zsh"><span class="nav-text">2. 安装 oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装-oh-my-zsh-主题"><span class="nav-text">3. 安装 oh-my-zsh 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装oh-my-zsh插件"><span class="nav-text">4. 安装oh-my-zsh插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-text">git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extract"><span class="nav-text">extract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublime"><span class="nav-text">sublime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autojump"><span class="nav-text">autojump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions"><span class="nav-text">zsh-autosuggestions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-完成"><span class="nav-text">5. 完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-zsh安装后的conda使用：报错与解决"><span class="nav-text">(Optional) zsh安装后的conda使用：报错与解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-准备：安装Homebrew"><span class="nav-text">0. 准备：安装Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-配置Mac终端主题"><span class="nav-text">1. 配置Mac终端主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装-oh-my-zsh"><span class="nav-text">2. 安装 oh-my-zsh</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装-oh-my-zsh-主题"><span class="nav-text">3. 安装 oh-my-zsh 主题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装oh-my-zsh插件"><span class="nav-text">4. 安装oh-my-zsh插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git"><span class="nav-text">git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extract"><span class="nav-text">extract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sublime"><span class="nav-text">sublime</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#autojump"><span class="nav-text">autojump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-syntax-highlighting"><span class="nav-text">zsh-syntax-highlighting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh-autosuggestions"><span class="nav-text">zsh-autosuggestions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-完成"><span class="nav-text">5. 完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-zsh安装后的conda使用：报错与解决"><span class="nav-text">(Optional) zsh安装后的conda使用：报错与解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-zsh自定义快捷指令"><span class="nav-text">(Optional) zsh自定义快捷指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
@@ -943,7 +958,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">172k</span>
+    <span title="Symbols count total">173k</span>
   
 
   
