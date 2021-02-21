@@ -4168,20 +4168,16 @@
 <p>= -0.02-0.02-0.1-0.1-0.1-0.1+0.32+0.25+0.21+0.1 </p>
 <p>= <strong>0.44</strong></p>
 <h2 id="2-Suprise"><a href="#2-Suprise" class="headerlink" title="2. Suprise"></a>2. Suprise</h2><p>Since the information content  of the individual event or the “surprise” of the event is calculated by:</p>
-<center>$I(E) = -log(P(E))$</center>
+<center>I(E) = -log(P(E))</center>
 
+<p>For the observed event x = 10, from last question we know the probability that this event happens is 0.18. So the surprise of it is: </p>
+<p>-log2(0.18) = -(-2.47) = <strong>2.47</strong></p>
+<h2 id="3-Free-Energy"><a href="#3-Free-Energy" class="headerlink" title="3. Free Energy"></a>3. Free Energy</h2><p>From last two questions we have already got the reverse divergence (=0.1) and surprise (=2.47) of event No.10. Using the formula:</p>
+<center>Free Energy = Reverse Divergence + Surprise</center>
 
-
-
-
-
-
-
-
-
-
-
-
+<p>we could easily get Free Energy (F) = 0.1 + 2.47 </p>
+<p><strong>= 2.57</strong></p>
+<h2 id="4-Relationship-between-emotions-and-dynamic-free-energy"><a href="#4-Relationship-between-emotions-and-dynamic-free-energy" class="headerlink" title="4. Relationship between emotions and dynamic free energy"></a>4. Relationship between emotions and dynamic free energy</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1] Joffily M, Coricelli G (2013) Emotional Valence and the Free-Energy Principle. PLoS Comput Biol 9(6): e1003094.</p>
 ]]></content>
       <categories>
         <category>CUHK</category>
