@@ -4588,4 +4588,25 @@
         <tag>IELTS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Social Media Analysis (4)</title>
+    <url>/2021/04/21/socialmedia-a4/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h2 id="1-Sentiment-Analysis"><a href="#1-Sentiment-Analysis" class="headerlink" title="1. Sentiment Analysis"></a>1. Sentiment Analysis</h2><p>I obtained in Project One is 0.89 . It means that basiclly, comments given to me or I give to others are positive. </p>
+<h2 id="2-Social-Network-Analysis"><a href="#2-Social-Network-Analysis" class="headerlink" title="2. Social Network Analysis"></a>2. Social Network Analysis</h2><ol>
+<li>My in-degree is 8, which means that there are 8 people that have ever left a comment in my blogs. I think the number is not as many as I thought. Maybe I should have more interactions with my classmates and the in-degree might be more. </li>
+<li>My out-degree is 11, which means that I gave comments to 11 classmates. That’s more than my in-degree. But I believe if more classmates I have given comments, maybe the in-degree will be more. </li>
+<li>My closeness centrality is 0.44. The value is between 0 and 1. The more closeness centrality is, the more interaction with classmates. The more out-degree is, the more closenesss centrality will be. (Not exactly proportional)</li>
+<li>My shortest-path betweenness is 0.0137. It means the number of shortest-path that go through a point, which shows the importance of a point. 0.01 maybe a little bit small.</li>
+</ol>
+<h2 id="3-Overall-Course-Reflection"><a href="#3-Overall-Course-Reflection" class="headerlink" title="3. Overall Course Reflection"></a>3. Overall Course Reflection</h2><p>In this course, I have learn some skills to do the social media analysis. And it is the first time of mine to see our behaviors in such a way, using some programming methods. </p>
+<p>Also, I shared with others my understandings of some concepts like “Mutual Information”, or the relationship between emotions and dynamic free energy. I also gave some examples which impress some of my classmates. </p>
+<p>I feel that using the technical or analytics way to think about our social behaviors could make us more positive in the social interaction. The more people you give comments to, the more comments you will get.</p>
+<p>After this course, I think I will be more willing to share my comments or interact with people in the future life. And also I will keep using these methods to analyze the behavior of people. This course really took me in to the trip to social analysis world.</p>
+]]></content>
+      <categories>
+        <category>CUHK</category>
+      </categories>
+  </entry>
 </search>

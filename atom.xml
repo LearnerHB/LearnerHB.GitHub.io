@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bingcs.com/"/>
-  <updated>2021-03-07T03:52:04.714Z</updated>
+  <updated>2021-04-24T03:34:41.137Z</updated>
   <id>http://bingcs.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Social Media Analysis (4)</title>
+    <link href="http://bingcs.com/2021/04/21/socialmedia-a4/"/>
+    <id>http://bingcs.com/2021/04/21/socialmedia-a4/</id>
+    <published>2021-04-21T14:31:06.000Z</published>
+    <updated>2021-04-24T03:34:41.137Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><h2 id="1-Sentiment-Analysis"><a href="#1-Sentiment-Analysis" class="headerlink" title="1. Sentiment Analysis"></a>1. Sentiment Analysis</h2><p>I obtained in Project One is 0.89 . It means that basiclly, comments given to me or I give to others are positive. </p><h2 id="2-Social-Network-Analysis"><a href="#2-Social-Network-Analysis" class="headerlink" title="2. Social Network Analysis"></a>2. Social Network Analysis</h2><ol><li>My in-degree is 8, which means that there are 8 people that have ever left a comment in my blogs. I think the number is not as many as I thought. Maybe I should have more interactions with my classmates and the in-degree might be more. </li><li>My out-degree is 11, which means that I gave comments to 11 classmates. That’s more than my in-degree. But I believe if more classmates I have given comments, maybe the in-degree will be more. </li><li>My closeness centrality is 0.44. The value is between 0 and 1. The more closeness centrality is, the more interaction with classmates. The more out-degree is, the more closenesss centrality will be. (Not exactly proportional)</li><li>My shortest-path betweenness is 0.0137. It means the number of shortest-path that go through a point, which shows the importance of a point. 0.01 maybe a little bit small.</li></ol><h2 id="3-Overall-Course-Reflection"><a href="#3-Overall-Course-Reflection" class="headerlink" title="3. Overall Course Reflection"></a>3. Overall Course Reflection</h2><p>In this course, I have learn some skills to do the social media analysis. And it is the first time of mine to see our behaviors in such a way, using some programming methods. </p><p>Also, I shared with others my understandings of some concepts like “Mutual Information”, or the relationship between emotions and dynamic free energy. I also gave some examples which impress some of my classmates. </p><p>I feel that using the technical or analytics way to think about our social behaviors could make us more positive in the social interaction. The more people you give comments to, the more comments you will get.</p><p>After this course, I think I will be more willing to share my comments or interact with people in the future life. And also I will keep using these methods to analyze the behavior of people. This course really took me in to the trip to social analysis world.</p>]]></content>
+    
+    <summary type="html">
+    
+      Course Assignment
+    
+    </summary>
+    
+      <category term="CUHK" scheme="http://bingcs.com/categories/CUHK/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Social Media Analysis (3)</title>
@@ -403,36 +423,6 @@
     
     
       <category term="Travel" scheme="http://bingcs.com/tags/Travel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>启·示</title>
-    <link href="http://bingcs.com/2019/10/28/sayings/"/>
-    <id>http://bingcs.com/2019/10/28/sayings/</id>
-    <published>2019-10-28T08:49:27.000Z</published>
-    <updated>2021-01-26T03:21:48.190Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="2021-01-26"><a href="#2021-01-26" class="headerlink" title="2021-01-26"></a>2021-01-26</h2><ul><li>当面临要么改变想法，要么证明无需这么做的选择时，绝大多数人都会忙于寻找证据。 – 约翰·肯尼斯·加尔布雷思</li></ul><h2 id="2020-05-17"><a href="#2020-05-17" class="headerlink" title="2020-05-17"></a>2020-05-17</h2><ul><li>冷静观察，稳住阵脚，沉着应付，韬光养晦，善于守拙，决不当头。 – 邓小平 “24字指示”</li></ul><h2 id="2020-05-02"><a href="#2020-05-02" class="headerlink" title="2020-05-02"></a>2020-05-02</h2><ul><li>中国人讲求实际，这一点突出体现在对待征服者的态度上。当异族君主赢得战争时，中国的官僚阶层会随之归顺，同时又游说征服者，他们刚刚征服的中国疆土幅员辽阔，文化独特，只能以中国人的方式、中国的语言和现有的中国官僚机构来统治。征服者一代代逐渐被同化到他们当初试图控制的秩序中。最终，他们的老家，即发动侵略的起始点，成了中国的一部分。征服者自己开始追求传统的中国国家利益——征服者反被征服。– 《论中国》基辛格</li></ul><a id="more"></a><h2 id="2020-02-15"><a href="#2020-02-15" class="headerlink" title="2020-02-15"></a>2020-02-15</h2><ul><li>War is peace. Freedom is slavery. Ignorance is strength. – George Orwell</li></ul><h2 id="2020-02-07"><a href="#2020-02-07" class="headerlink" title="2020-02-07"></a>2020-02-07</h2><ul><li><p>We are punished by our sins, not for them  –  Elbert Hubbard</p></li><li><p>水可载舟，亦可覆舟。 – 《荀子·王制》</p></li></ul><h2 id="2020-01-29-肺炎疫情有感"><a href="#2020-01-29-肺炎疫情有感" class="headerlink" title="2020-01-29 肺炎疫情有感"></a>2020-01-29 肺炎疫情有感</h2><ul><li><p>We learn from history that we do not learn from history. – Hegel</p></li><li><p>无知者无畏。</p></li></ul><h2 id="2020-01-06"><a href="#2020-01-06" class="headerlink" title="2020-01-06"></a>2020-01-06</h2><ul><li>Who controls the past controls the future. Who controls the present controls the past. – George Orwell</li></ul><h2 id="2019-10-30"><a href="#2019-10-30" class="headerlink" title="2019-10-30"></a>2019-10-30</h2><ul><li>实践是检验真理的唯一标准。</li></ul><h2 id="2019-10-29"><a href="#2019-10-29" class="headerlink" title="2019-10-29"></a>2019-10-29</h2><ul><li>We are all capable of believing things which we know to be untrue, and then, when we are finally proved wrong, impudently twisting the facts so as to show that we were right. – George Orwell</li></ul><h2 id="2019-10-28"><a href="#2019-10-28" class="headerlink" title="2019-10-28"></a>2019-10-28</h2><ul><li>如果你要人们认同和重视你的言论，你就必须在大家面对危机，水深火热的时候挺身而出。—- 李光耀</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;2021-01-26&quot;&gt;&lt;a href=&quot;#2021-01-26&quot; class=&quot;headerlink&quot; title=&quot;2021-01-26&quot;&gt;&lt;/a&gt;2021-01-26&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;当面临要么改变想法，要么证明无需这么做的选择时，绝大多数人都会忙于寻找证据。 – 约翰·肯尼斯·加尔布雷思&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2020-05-17&quot;&gt;&lt;a href=&quot;#2020-05-17&quot; class=&quot;headerlink&quot; title=&quot;2020-05-17&quot;&gt;&lt;/a&gt;2020-05-17&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;冷静观察，稳住阵脚，沉着应付，韬光养晦，善于守拙，决不当头。 – 邓小平 “24字指示”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;2020-05-02&quot;&gt;&lt;a href=&quot;#2020-05-02&quot; class=&quot;headerlink&quot; title=&quot;2020-05-02&quot;&gt;&lt;/a&gt;2020-05-02&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;中国人讲求实际，这一点突出体现在对待征服者的态度上。当异族君主赢得战争时，中国的官僚阶层会随之归顺，同时又游说征服者，他们刚刚征服的中国疆土幅员辽阔，文化独特，只能以中国人的方式、中国的语言和现有的中国官僚机构来统治。征服者一代代逐渐被同化到他们当初试图控制的秩序中。最终，他们的老家，即发动侵略的起始点，成了中国的一部分。征服者自己开始追求传统的中国国家利益——征服者反被征服。– 《论中国》基辛格&lt;/li&gt;
-&lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="Reading&amp;Thinking" scheme="http://bingcs.com/categories/Reading-Thinking/"/>
-    
-    
-      <category term="Sayings" scheme="http://bingcs.com/tags/Sayings/"/>
     
   </entry>
   
