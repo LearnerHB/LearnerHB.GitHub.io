@@ -106,10 +106,20 @@
 <meta property="og:site_name" content="Bing&#39;s Blog">
 <meta property="og:description" content="Docker相关学习">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-06-25T07:52:43.502Z">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090416.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090730.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090945.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-06-29-023053.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-112250.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-115325.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-121547.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-121730.png">
+<meta property="og:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-113945.png">
+<meta property="og:updated_time" content="2021-07-01T12:18:53.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Journey of Docker">
 <meta name="twitter:description" content="Docker相关学习">
+<meta name="twitter:image" content="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090416.png">
 
 
 
@@ -401,12 +411,24 @@
                 
               
 
-              <time title="Created: 2021-06-25 15:39:04 / Modified: 15:52:43" itemprop="dateCreated datePublished" datetime="2021-06-25T15:39:04+08:00">2021-06-25</time>
+              <time title="Created: 2021-06-25 15:39:04" itemprop="dateCreated datePublished" datetime="2021-06-25T15:39:04+08:00">2021-06-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2021-07-01 20:18:53" itemprop="dateModified" datetime="2021-07-01T20:18:53+08:00">2021-07-01</time>
               
             
           </span>
@@ -470,7 +492,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">106</span>
+                <span title="Symbols count in article">2.6k</span>
               
 
               
@@ -484,7 +506,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">1 mins.</span>
+                <span title="Reading time">2 mins.</span>
               
             </div>
           
@@ -508,12 +530,146 @@
       
         <a id="more"></a>
 
+<p>[toc]</p>
 <p>（填坑中……）</p>
-<h2 id="1-为什么要有Docker？"><a href="#1-为什么要有Docker？" class="headerlink" title="1. 为什么要有Docker？"></a>1. 为什么要有Docker？</h2><h2 id="2-什么是Docker？"><a href="#2-什么是Docker？" class="headerlink" title="2. 什么是Docker？"></a>2. 什么是Docker？</h2><h2 id="3-Docker简明教程"><a href="#3-Docker简明教程" class="headerlink" title="3. Docker简明教程"></a>3. Docker简明教程</h2><h2 id="4-Docker微服务实践"><a href="#4-Docker微服务实践" class="headerlink" title="4. Docker微服务实践"></a>4. Docker微服务实践</h2><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
-<li><p><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">Docker入门教程-阮一峰的网络日志</a></p>
+<h2 id="为什么要有Docker？"><a href="#为什么要有Docker？" class="headerlink" title="为什么要有Docker？"></a>为什么要有Docker？</h2><h2 id="什么是Docker？"><a href="#什么是Docker？" class="headerlink" title="什么是Docker？"></a>什么是Docker？</h2><h2 id="Docker简明教程"><a href="#Docker简明教程" class="headerlink" title="Docker简明教程"></a>Docker简明教程</h2><h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><h2 id="Docker微服务实践"><a href="#Docker微服务实践" class="headerlink" title="Docker微服务实践"></a>Docker微服务实践</h2><h3 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h3><p><a href="https://github.com/docker/compose" target="_blank" rel="noopener">Compose </a>是Docker公司推出的一个工具软件，可以管理多个Docker容器组成一个应用。你需要定义一个YAML格式的配置文件<code>docker-compose.yml</code>，写好多个容器之间的调用关系。然后只需要一个命令就可以同时启动、关闭这些容器。</p>
+<p>使用Compose的步骤基本上可以概括为：</p>
+<ol>
+<li>用一个<code>Dockerfile</code>文件定义你的app的环境</li>
+<li>用一个<code>docker-compose.yml</code>文件定义你的服务，使之可以运行在同一个隔离的环境中</li>
+<li>运行 <code>docker compose up</code> 命令来开启你的服务</li>
+</ol>
+<p>一个 <code>docker-compose.yml</code> 文件长这样：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3.9"</span>  <span class="comment"># optional since v1.27.0</span></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">web:</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"5000:5000"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">.:/code</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">logvolume01:/var/log</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">redis</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line"><span class="attr">volumes:</span></span><br><span class="line">  <span class="attr">logvolume01:</span> <span class="string">&#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>你可以在 <a href="https://github.com/docker/awesome-compose" target="_blank" rel="noopener">这里</a> 找到一些官方推荐的compose例子。</p>
+<h2 id="容器安全风险与防范"><a href="#容器安全风险与防范" class="headerlink" title="容器安全风险与防范"></a>容器安全风险与防范</h2><p>（听组里大佬的分享，做一下简单的笔记）</p>
+<h3 id="1-容器发展历程"><a href="#1-容器发展历程" class="headerlink" title="1. 容器发展历程"></a>1. 容器发展历程</h3><p><strong>chroot</strong> (1979): Unix V7 chroot技术的引进开启了进程隔离的大门</p>
+<p><strong>LXC</strong> (2008): 第一个完善的Linux容器管理实现方案</p>
+<p><strong>Docker</strong> (2013): 引入了整个管理容器的生态docker</p>
+<p><strong>Rocket</strong> (2014): rkt想要解决Docker中发现的一些安全缺陷</p>
+<p><strong>Windows容器</strong> (2016): Windows Server 2016原生支持Docker容器</p>
+<h3 id="2-镜像和容器"><a href="#2-镜像和容器" class="headerlink" title="2. 镜像和容器"></a>2. 镜像和容器</h3><p><strong>镜像(image)</strong>：一种特殊的文件系统，包含有程序、库、配置文件等文件，包括一些环境变量。镜像不包含任何动态数据，其内容在构建之后也不会改变。</p>
+<p><strong>容器(Container)</strong>：镜像运行起来的实例，一个镜像可以有多个实例，包括动态数据。</p>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090416.png" alt="image-20210701170415699"></p>
+<h3 id="3-容器的优势"><a href="#3-容器的优势" class="headerlink" title="3. 容器的优势"></a>3. 容器的优势</h3><ul>
+<li>一致的环境：软件依赖、基础系统依赖</li>
+<li>任何地方运行：Linux/Windows/Mac/虚拟机/裸机</li>
+<li>隔离：OS级别虚拟化，CPU、内存、网络资源隔离</li>
+</ul>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090730.png" alt="image-20210701170730301"></p>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-090945.png" alt="image-20210701170934477"></p>
+<h3 id="4-容器编排系统"><a href="#4-容器编排系统" class="headerlink" title="4. 容器编排系统"></a>4. 容器编排系统</h3><p>容器编排系统将用户镜像自动化部署到集群环境中，并且管理容器工作，可以监控容器运行状态，自动扩缩容、升级、回滚等。常见的容器编排系统如 Kubernetes。</p>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-06-29-023053.png" alt="image-20210629103052447"></p>
+<center>一个Kubernetes集群</center>
+
+
+
+<h3 id="5-容器安全"><a href="#5-容器安全" class="headerlink" title="5. 容器安全"></a>5. 容器安全</h3><h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><ol>
+<li>Graboid蠕虫</li>
+</ol>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-112250.png" alt="加密挖矿蠕虫病毒活动概览"></p>
+<center>加密挖矿蠕虫病毒活动概览</center>
+
+
+
+<p><a href="https://shodan.io/" target="_blank" rel="noopener">Shodan</a>的快速调查显示，有2,000多个Docker Engine以不安全的方式暴露于互联网。无需任何身份验证或授权，攻击者就可以完全控制Docker Engine（社区版）和主机。恰恰是抓住了这一入口，攻击者才会部署并传播这一蠕虫病毒。上图标明了该恶意软件的分发和传播方式。攻击者入侵了一个未受保护的Docker daemon，运行从Docker Hub中提取的恶意Docker容器，从C2服务器下载一些脚本和易受攻击的主机列表，并反复选取下个目标传播蠕虫。</p>
+<ol start="2">
+<li>Dirty Cow</li>
+</ol>
+<p><a href="https://github.com/gbonacini/CVE-2016-5195" target="_blank" rel="noopener">CVE-2016-5195</a></p>
+<p>该漏洞具体为，Linux内核的内存子系统在处理写入复制（copy-on-write, COW）时产生了竞争条件（race condition）。恶意用户可利用此漏洞，来获取高权限，对只读内存映射进行写访问。竞争条件，指的是任务执行顺序异常，可导致应用崩溃，或令攻击者有机可乘，进一步执行其他代码。利用这一漏洞，攻击者可在其目标系统提升权限，甚至可能获得root权限。</p>
+<h4 id="容器安全架构"><a href="#容器安全架构" class="headerlink" title="容器安全架构"></a>容器安全架构</h4><p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-115325.png" alt="image-20210701195325128"></p>
+<center>容器安全架构</center>
+
+<h4 id="安全容器技术"><a href="#安全容器技术" class="headerlink" title="安全容器技术"></a>安全容器技术</h4><ul>
+<li><p>利用虚拟化技术增强容器安全性</p>
+<ul>
+<li>Google gVisor</li>
+<li>IBM Nabla</li>
+<li>Openstack Kata</li>
+<li>Vmware vSphere Integrated Containers</li>
+</ul>
 </li>
-<li><p><a href="http://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html" target="_blank" rel="noopener">Docker微服务教程-阮一峰的网络日志</a></p>
+<li><p>利用硬件隔离</p>
+<ul>
+<li>SGX</li>
+</ul>
 </li>
+</ul>
+<h3 id="6-镜像安全"><a href="#6-镜像安全" class="headerlink" title="6. 镜像安全"></a>6. 镜像安全</h3><h4 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h4><ul>
+<li>镜像周期<ul>
+<li>用户镜像的数据来源多样化（dockerhub、内部镜像库）</li>
+<li>开源，每个人均可访问，若有安全问题则传播加速</li>
+</ul>
+</li>
+<li>开源框架<ul>
+<li>误报率高</li>
+</ul>
+</li>
+</ul>
+<h4 id="问题和风险"><a href="#问题和风险" class="headerlink" title="问题和风险"></a>问题和风险</h4><ul>
+<li>镜像篡改</li>
+<li>恶意镜像</li>
+<li>未授权访问</li>
+</ul>
+<h4 id="应对策略"><a href="#应对策略" class="headerlink" title="应对策略"></a>应对策略</h4><ul>
+<li>安全通信</li>
+<li>访问控制</li>
+<li>镜像存储隔离</li>
+<li>镜像漏洞，恶意程序，配置扫描</li>
+<li>镜像加密，签名</li>
+</ul>
+<h3 id="7-集群安全"><a href="#7-集群安全" class="headerlink" title="7. 集群安全"></a>7. 集群安全</h3><h4 id="风险"><a href="#风险" class="headerlink" title="风险"></a>风险</h4><ul>
+<li>Master 节点被控制</li>
+<li>内部API开放</li>
+<li>集群信息泄露</li>
+<li>凭据安全保存</li>
+</ul>
+<h4 id="防范"><a href="#防范" class="headerlink" title="防范"></a>防范</h4><p><a href="https://github.com/aquasecurity/kube-bench" target="_blank" rel="noopener">Kube-bench</a> 用来检查Kubernetes是否被安全部署。</p>
+<h3 id="8-运行时安全"><a href="#8-运行时安全" class="headerlink" title="8. 运行时安全"></a>8. 运行时安全</h3><ul>
+<li>Selinux</li>
+<li>LSM-Apparmor</li>
+<li>ebpf</li>
+</ul>
+<h3 id="9-容器网络安全"><a href="#9-容器网络安全" class="headerlink" title="9. 容器网络安全"></a>9. 容器网络安全</h3><h4 id="网络模型"><a href="#网络模型" class="headerlink" title="网络模型"></a>网络模型</h4><ol>
+<li>CNM模型（Container Network Model）</li>
+</ol>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-121547.png" alt="image-20210701201547008"></p>
+<center>CNM模型</center>
+
+<p>CNM模型主要通过 Network Sanbox , Endpoint 和 Network 这三个朱建进行实现</p>
+<ul>
+<li>Network Sanbox: 容器内部的网络栈, 包括网络接口,路由表, dns 等配置,一个 network sanbox 可以包含多个 endpoint</li>
+<li>endpoint: 用于将容器内的sanbox 与外部网络相关联的网络接口. 可用使用veth ovs , 内部port 等技术实现</li>
+<li>network: 可以直接互联的endpoint 集合. 可以通过linux 网桥, vlan等技术实现.</li>
+</ul>
+<ol start="2">
+<li>CNI模型</li>
+</ol>
+<p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-121730.png" alt="image-20210701201729741"></p>
+<p>CNI 的规范比较小巧。它规定了一个容器runtime和网络插件之间的简单的契约。这个契约通过JSON的语法定义了CNI插件所需要提供的输入和输出。</p>
+<p>一个容器可以被加入到被不同插件所驱动的多个网络之中。一个网络有自己对应的插件和唯一的名称。CNI 插件需要提供两个命令：一个用来将网络接口加入到指定网络，另一个用来将其移除。这两个接口分别在容器被创建和销毁的时候被调用。</p>
+<h4 id="风险和防范"><a href="#风险和防范" class="headerlink" title="风险和防范"></a>风险和防范</h4><p><img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-07-01-113945.png" alt="image-20210701193945324"></p>
+<p>风险：</p>
+<ul>
+<li>南北向的外部入侵</li>
+<li>东西向的横向入侵</li>
+<li>性能开销</li>
+</ul>
+<p>应对措施</p>
+<ul>
+<li>细粒度容器之间的网络访问控制。例如：App1可以访问App3</li>
+<li>容器网络拓扑</li>
+<li>Ebpf技术</li>
+</ul>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ol>
+<li><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">Docker入门教程</a>, by 阮一峰</li>
+<li><a href="http://www.ruanyifeng.com/blog/2018/02/docker-wordpress-tutorial.html" target="_blank" rel="noopener">Docker微服务教程</a>, by 阮一峰</li>
+<li><a href="https://www.sitepoint.com/how-to-manually-build-docker-containers-for-wordpress/" target="_blank" rel="noopener">How to Manually Build Docker Containers for WordPress</a>, by Aleksander Koko</li>
+<li><a href="https://www.sitepoint.com/how-to-use-the-official-docker-wordpress-image/" target="_blank" rel="noopener">How to Use the Official Docker WordPress Image</a>, by Aleksander Koko</li>
+<li><a href="https://www.sitepoint.com/deploying-wordpress-with-docker/" target="_blank" rel="noopener">Deploying WordPress with Docker</a>, by Aleksander Koko</li>
+<li><a href="https://www.paloaltonetworks.com/blog/2019/10/graboid-first-ever-cryptojacking-worm/?lang=zh-hans" target="_blank" rel="noopener">Docker Hub镜像中首次发现名为Graboid的加密挖矿蠕虫病毒</a></li>
 </ol>
 
       
@@ -657,7 +813,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">40</span>
+                    <span class="site-state-item-count">41</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -739,7 +895,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -832,7 +990,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-为什么要有Docker？"><span class="nav-text">1. 为什么要有Docker？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-什么是Docker？"><span class="nav-text">2. 什么是Docker？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Docker简明教程"><span class="nav-text">3. Docker简明教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Docker微服务实践"><span class="nav-text">4. Docker微服务实践</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么要有Docker？"><span class="nav-text">为什么要有Docker？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Docker？"><span class="nav-text">什么是Docker？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker简明教程"><span class="nav-text">Docker简明教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dockerfile"><span class="nav-text">Dockerfile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker微服务实践"><span class="nav-text">Docker微服务实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Docker-Compose"><span class="nav-text">Docker Compose</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#容器安全风险与防范"><span class="nav-text">容器安全风险与防范</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-容器发展历程"><span class="nav-text">1. 容器发展历程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-镜像和容器"><span class="nav-text">2. 镜像和容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-容器的优势"><span class="nav-text">3. 容器的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-容器编排系统"><span class="nav-text">4. 容器编排系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-容器安全"><span class="nav-text">5. 容器安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#案例"><span class="nav-text">案例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容器安全架构"><span class="nav-text">容器安全架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安全容器技术"><span class="nav-text">安全容器技术</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-镜像安全"><span class="nav-text">6. 镜像安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#现状"><span class="nav-text">现状</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题和风险"><span class="nav-text">问题和风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应对策略"><span class="nav-text">应对策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-集群安全"><span class="nav-text">7. 集群安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#风险"><span class="nav-text">风险</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#防范"><span class="nav-text">防范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-运行时安全"><span class="nav-text">8. 运行时安全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-容器网络安全"><span class="nav-text">9. 容器网络安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网络模型"><span class="nav-text">网络模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#风险和防范"><span class="nav-text">风险和防范</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
             
 
           </div>
@@ -866,7 +1024,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">186k</span>
+    <span title="Symbols count total">190k</span>
   
 
   
@@ -875,7 +1033,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:49</span>
+    <span title="Reading time total">2:53</span>
   
 </div>
 
