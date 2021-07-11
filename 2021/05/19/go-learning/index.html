@@ -106,7 +106,7 @@
 <meta property="og:site_name" content="Bing&#39;s Blog">
 <meta property="og:description" content="Golang学习，仅作笔记，不成体系">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-06-25T07:41:21.656Z">
+<meta property="og:updated_time" content="2021-07-05T05:05:05.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Journey of Go">
 <meta name="twitter:description" content="Golang学习，仅作笔记，不成体系">
@@ -418,7 +418,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2021-06-25 15:41:21" itemprop="dateModified" datetime="2021-06-25T15:41:21+08:00">2021-06-25</time>
+                <time title="Modified: 2021-07-05 13:05:05" itemprop="dateModified" datetime="2021-07-05T13:05:05+08:00">2021-07-05</time>
               
             
           </span>
@@ -482,7 +482,7 @@
                 
                   <span class="post-meta-item-text">Symbols count in article: </span>
                 
-                <span title="Symbols count in article">3.4k</span>
+                <span title="Symbols count in article">5k</span>
               
 
               
@@ -496,7 +496,7 @@
                 
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
-                <span title="Reading time">3 mins.</span>
+                <span title="Reading time">5 mins.</span>
               
             </div>
           
@@ -521,8 +521,6 @@
         <a id="more"></a>
 
 <p>(更新中……)</p>
-<h2 id="推荐阅读-amp-资料"><a href="#推荐阅读-amp-资料" class="headerlink" title="推荐阅读 &amp; 资料"></a>推荐阅读 &amp; 资料</h2><p><a href="http://books.studygolang.com/gopl-zh/ch5/ch5-07.html" target="_blank" rel="noopener">《Go圣经》</a></p>
-<p><a href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch1-basic/readme.html" target="_blank" rel="noopener">《Go语言高级编程》</a></p>
 <h2 id="程序结构"><a href="#程序结构" class="headerlink" title="程序结构"></a>程序结构</h2><ul>
 <li>内建new函数，是预定义函数而不是关键字，可以将new这个名字重新定义为别的类型</li>
 <li>Go自动垃圾收集器 &amp; 变量生命周期</li>
@@ -539,43 +537,30 @@
 <li>itoa常量生成器</li>
 <li>无类型常量被赋值给一个变量的时候会被隐式转换为对应的类型</li>
 </ul>
-<h2 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h2><ul>
-<li><p>数组：  </p>
-<ul>
+<h2 id="复合数据类型"><a href="#复合数据类型" class="headerlink" title="复合数据类型"></a>复合数据类型</h2><h3 id="数组："><a href="#数组：" class="headerlink" title="数组："></a>数组：</h3><ul>
 <li>var q [3]int = [3]int{1,2,3     q := […]int{1,2,3}  r := […]int{99:-1} 未指定初始值的用0初始化,99到-1，其余都是0</li>
 <li>数组长度是数组类型的一个组成部分；由于数组长度的限制条件，所以很少用作函数参数，一般用slice来代替数组</li>
 </ul>
-</li>
-<li><p>Slice切片：</p>
-<ul>
+<h3 id="Slice切片"><a href="#Slice切片" class="headerlink" title="Slice切片"></a>Slice切片</h3><ul>
 <li>变长的序列；三部分组成：指针、长度len、容量cap (一般slice开始位置到底层数据的结尾位置)</li>
 <li>和数组不同的是，Slice之间不能比较，不能用-=来判断两个slice是否具有全部相等元素</li>
 <li>切片唯一合法的比较操作是和nil比较。判断slice是否为空应该用len(s)==0判断而不是s==nil。</li>
 <li>make([]T, len) 和 make([]T, len, cap)的区别</li>
 <li>append函数；copy函数；append模拟stack；copy函数实现删除slice中某元素</li>
 </ul>
-</li>
-<li><p>Map： </p>
-<ul>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><ul>
 <li>:= make(map[string]int) 或 := map[string]int{}来创建；内置delete函数可以删除元素delete(ages, “Alice”)</li>
 <li>map中的元素并不是变量，所以不能对map的元素进行取址 _ = &amp;ages[“bob”]会报错</li>
 <li>nil值的map存入元素将导致panic异常</li>
 <li>map[string]bool实现set的功能（Go中没有Set类型）</li>
 </ul>
-</li>
-<li><p>结构体</p>
-<ul>
+<h3 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h3><ul>
 <li>命名为S的结构体类型内不能包含S类型的成员，但可以包含*S指针类型的成员，由此可以创建递归的数据结构如链表和树</li>
 <li>结构体作为参数传函数的时候，如果希望能够更改结构体成员，必须用指针传入，因为Go中所有函数参数都是值拷贝传入</li>
 <li>如果结构体的全部成员都是可以比较的，那么结构体也是可以比较的；可比较的结构体类型和其他可比较类型一样，可以用语map 的key类型</li>
 <li>匿名成员，匿名嵌入，直接访问叶子属性；但结构体字面值并没有简短表示匿名成员的方法</li>
 </ul>
-</li>
-</ul>
-<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><ul>
-<li>Defferred函数</li>
-</ul>
-<p>普通函数或方法前加上关键字defer，当执行到该条语句时，函数和参数表达式得到计算，但直到包含该defer语句的函数执行完毕时，defer后面的函数才会被执行，不论包含defer的语句是正常return还是panic导致嗯异常结束。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="Defferred函数"><a href="#Defferred函数" class="headerlink" title="Defferred函数"></a>Defferred函数</h3><p>普通函数或方法前加上关键字defer，当执行到该条语句时，函数和参数表达式得到计算，但直到包含该defer语句的函数执行完毕时，defer后面的函数才会被执行，不论包含defer的语句是正常return还是panic导致嗯异常结束。</p>
 <p>defer语句常用于处理成对的操作，如打开/关闭，连接/断开连接，加锁/释放锁。通过defer机制来保障资源的正常释放，释放资源的defer语句应该直接跟在请求资源的语句后。</p>
 <ol>
 <li>借助Defer机制观察函数的返回值：由于defer语句中的函数会在return语句更新返回值变量后再执行，又因为在函数中定义的匿名函数可以访问该函数包括返回值变量在内的所有变量，所以，对匿名函数采用defer机制，可以使其观察函数的返回值。</li>
@@ -587,18 +572,9 @@
 </ol>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">triple</span><span class="params">(x <span class="keyword">int</span>)</span> <span class="params">(result <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">    <span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123; result += x &#125;()</span><br><span class="line">    <span class="keyword">return</span> double(x)</span><br><span class="line">&#125;</span><br><span class="line">fmt.Println(triple(<span class="number">4</span>)) <span class="comment">// "12"</span></span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>Panic异常</li>
-</ul>
-<p>数组访问越界、空指针引用等运行时出现的错误会引起panic异常。一般而言，panic异常发生的时候，程序会中断运行，并立即执行在该goroutine中被延迟的函数（defer 机制）。随后，程序崩溃并输出日志信息。</p>
+<h3 id="Panic异常"><a href="#Panic异常" class="headerlink" title="Panic异常"></a>Panic异常</h3><p>数组访问越界、空指针引用等运行时出现的错误会引起panic异常。一般而言，panic异常发生的时候，程序会中断运行，并立即执行在该goroutine中被延迟的函数（defer 机制）。随后，程序崩溃并输出日志信息。</p>
 <p>在健壮的程序中，任何可以预料到的错误都应该被优雅的地处理，最好的处理方式就是Go的错误机制，应该为了尽量避免程序的崩溃而少用panic。</p>
-<ul>
-<li>Recover捕获异常</li>
-</ul>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
-<li>方法声明</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> geometry</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"math"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span>&#123; X, Y <span class="keyword">float64</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// traditional function</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Distance</span><span class="params">(p, q Point)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// same thing, but as a method of the Point type</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Point)</span> <span class="title">Distance</span><span class="params">(q Point)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="方法声明"><a href="#方法声明" class="headerlink" title="方法声明"></a>方法声明</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> geometry</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"math"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span>&#123; X, Y <span class="keyword">float64</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// traditional function</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Distance</span><span class="params">(p, q Point)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// same thing, but as a method of the Point type</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p Point)</span> <span class="title">Distance</span><span class="params">(q Point)</span> <span class="title">float64</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> math.Hypot(q.X-p.X, q.Y-p.Y)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>上面的参数 p 成为方法的接收器。Go语言中，不会像其他语言那样用this或者self作为接收器，可以任意选择接收器的名字。建议保持其方法间传递时候的一致性和简短性，建议可以使用类型的第一个字母，如上所示。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p := Point&#123;<span class="number">1</span>, <span class="number">2</span>&#125;</span><br><span class="line">q := Point&#123;<span class="number">4</span>, <span class="number">6</span>&#125;</span><br><span class="line">fmt.Println(Distance(p, q)) <span class="comment">// "5", function call</span></span><br><span class="line">fmt.Println(p.Distance(q))  <span class="comment">// "5", method call	“选择器”</span></span><br></pre></td></tr></table></figure>
@@ -608,6 +584,37 @@
 
 <p>Path是一个命名的slice类型，而非Point这种struct类型，但依然可以为其定义方法。和其他语言不同，在Go语言中，我们为一些简单的数值、字符串、slice、map来定义一些附加行为十分方便。我们可以给同一个包内的任意命名累习惯定义方法，只要<strong>这个命名类型的底层类型</strong>（如Path这种命名类型中的[]Point这个slice的底层类型）<strong>不是指针或者interface</strong>。在两个对Distance名字的方法的调用中，编译器会根据方法的名字以及接收器来决定具体调用的是哪一个函数。</p>
 <p>由于一个给定的类型内部的方法有唯一的方法名，不同类型之间可以有同样的方法名，所以没有必要在方法名之前加类型名来消除歧义，因此方法名相比较函数名的好处是可以尽可能简短，这在包外调用的时候将具有优势。</p>
+<h3 id="基于指针对象的方法"><a href="#基于指针对象的方法" class="headerlink" title="基于指针对象的方法"></a>基于指针对象的方法</h3><p>在每一个合法的方法调用表达式中，下面三种情况里的任意一种情况都是可以的：</p>
+<p>要么接收器的实际参数和其形式参数是相同的类型，比如两者都是类型T或者都是类型<code>*T</code>：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Point&#123;<span class="number">1</span>, <span class="number">2</span>&#125;.Distance(q) <span class="comment">//  Point</span></span><br><span class="line">pptr.ScaleBy(<span class="number">2</span>)         <span class="comment">// *Point</span></span><br></pre></td></tr></table></figure>
+
+<p>或者接收器实参是类型T，但接收器形参是类型<code>*T</code>，这种情况下编译器会隐式地为我们取变量的地址：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p.ScaleBy(<span class="number">2</span>) <span class="comment">// implicit (&amp;p)</span></span><br></pre></td></tr></table></figure>
+
+<p>或者接收器实参是类型<code>*T</code>，形参是类型T。编译器会隐式地为我们解引用，取到指针指向的实际变量：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pptr.Distance(q) <span class="comment">// implicit (*pptr)</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>不管你的method的receiver是指针类型还是非指针类型，都是可以通过指针/非指针类型进行调用的，编译器会帮你做类型转换</li>
+<li>在声明一个method的receiver该是指针还是非指针类型时，你需要考虑两方面的因素，第一方面是这个对象本身是不是特别大，如果声明为非指针变量时，调用会产生一次拷贝；第二方面是如果你用指针类型作为receiver，那么你一定要注意，这种指针类型指向的始终是一块内存地址，就算你对其进行了拷贝。</li>
+</ul>
+<h4 id="Nil也是一个合法的接收器类型"><a href="#Nil也是一个合法的接收器类型" class="headerlink" title="Nil也是一个合法的接收器类型"></a>Nil也是一个合法的接收器类型</h4><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// An IntList is a linked list of integers.</span></span><br><span class="line"><span class="comment">// A nil *IntList represents the empty list.</span></span><br><span class="line"><span class="keyword">type</span> IntList <span class="keyword">struct</span> &#123;</span><br><span class="line">    Value <span class="keyword">int</span></span><br><span class="line">    Tail  *IntList</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Sum returns the sum of the list elements.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(list *IntList)</span> <span class="title">Sum</span><span class="params">()</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> list == <span class="literal">nil</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list.Value + list.Tail.Sum()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>nil.Sum()无法通过编译，应该写成Value(nil).Sum()。</li>
+</ul>
+<h3 id="通过嵌入结构体来扩展类型"><a href="#通过嵌入结构体来扩展类型" class="headerlink" title="通过嵌入结构体来扩展类型"></a>通过嵌入结构体来扩展类型</h3><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span>&#123; X, Y <span class="keyword">float64</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ColoredPoint <span class="keyword">struct</span> &#123;</span><br><span class="line">    Point</span><br><span class="line">    Color color.RGBA</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方法只能在命名类型（像Point）或者指向类型的指针上定义，但是多亏了内嵌，有些时候我们给匿名struct类型来定义方法也有了手段。</p>
+<p>下面是一个小trick。这个例子展示了简单的cache，其使用两个包级别的变量来实现，一个mutex互斥量和它所操作的cache：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> (</span><br><span class="line">    mu sync.Mutex <span class="comment">// guards mapping</span></span><br><span class="line">    mapping = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>)</span><br><span class="line">)</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Lookup</span><span class="params">(key <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">    mu.Lock()</span><br><span class="line">    v := mapping[key]</span><br><span class="line">    mu.Unlock()</span><br><span class="line">    <span class="keyword">return</span> v</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>下面这个版本在功能上是一致的，但将两个包级别的变量放在了cache这个struct一组内：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cache = <span class="keyword">struct</span> &#123;</span><br><span class="line">    sync.Mutex</span><br><span class="line">    mapping <span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span></span><br><span class="line">&#125;&#123;</span><br><span class="line">    mapping: <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">string</span>),</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Lookup</span><span class="params">(key <span class="keyword">string</span>)</span> <span class="title">string</span></span> &#123;</span><br><span class="line">    cache.Lock()</span><br><span class="line">    v := cache.mapping[key]</span><br><span class="line">    cache.Unlock()</span><br><span class="line">    <span class="keyword">return</span> v</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们给新的变量起了一个更具表达性的名字：cache。因为sync.Mutex字段也被嵌入到了这个struct里，其Lock和Unlock方法也就都被引入到了这个匿名结构中了，这让我们能够以一个简单明了的语法来对其进行加锁解锁操作。</p>
+<h2 id="推荐阅读-amp-资料"><a href="#推荐阅读-amp-资料" class="headerlink" title="推荐阅读 &amp; 资料"></a>推荐阅读 &amp; 资料</h2><p><a href="http://books.studygolang.com/gopl-zh/ch5/ch5-07.html" target="_blank" rel="noopener">《Go圣经》</a></p>
+<p><a href="https://chai2010.gitbooks.io/advanced-go-programming-book/content/ch1-basic/readme.html" target="_blank" rel="noopener">《Go语言高级编程》</a></p>
 
       
     </div>
@@ -787,6 +794,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
@@ -803,6 +812,8 @@
                     
                   
                     
+                    
+                      
                     
                       
                     
@@ -929,7 +940,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读-amp-资料"><span class="nav-text">推荐阅读 &amp; 资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程序结构"><span class="nav-text">程序结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数据类型"><span class="nav-text">基础数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合数据类型"><span class="nav-text">复合数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-text">函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序结构"><span class="nav-text">程序结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基础数据类型"><span class="nav-text">基础数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复合数据类型"><span class="nav-text">复合数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组："><span class="nav-text">数组：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Slice切片"><span class="nav-text">Slice切片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-text">Map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结构体"><span class="nav-text">结构体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Defferred函数"><span class="nav-text">Defferred函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Panic异常"><span class="nav-text">Panic异常</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法声明"><span class="nav-text">方法声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于指针对象的方法"><span class="nav-text">基于指针对象的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Nil也是一个合法的接收器类型"><span class="nav-text">Nil也是一个合法的接收器类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过嵌入结构体来扩展类型"><span class="nav-text">通过嵌入结构体来扩展类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读-amp-资料"><span class="nav-text">推荐阅读 &amp; 资料</span></a></li></ol></div>
             
 
           </div>
@@ -963,7 +974,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Symbols count total">190k</span>
+    <span title="Symbols count total">192k</span>
   
 
   
@@ -972,7 +983,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="Reading time total">2:53</span>
+    <span title="Reading time total">2:54</span>
   
 </div>
 
